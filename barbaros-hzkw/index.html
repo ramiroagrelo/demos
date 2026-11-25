@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bárbaro's · Barbería &amp; Amigos · Córdoba</title>
+<meta name="description" content="Barbería en Nueva Córdoba y Centro. Turnos online, DJ, fernet y 5 estrellas con 337 opiniones.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#111010;--negro2:#1c1a19;--rojo:#e3242b;--hueso:#efe9df;--gris:#9a948c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Space Grotesk",system-ui,sans-serif;background:var(--negro);color:var(--hueso);line-height:1.5;font-size:17px;padding-bottom:74px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.band{background:var(--hueso);color:var(--negro);font-size:12.5px;text-align:center;padding:7px 14px;font-weight:500}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Dela Gothic One",Impact,sans-serif;font-weight:400;line-height:.98;text-transform:uppercase;letter-spacing:.005em}
+.btn{display:inline-flex;justify-content:center;align-items:center;background:var(--rojo);color:#fff;text-decoration:none;font-weight:700;padding:15px 24px;border:0;font-size:15px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:inherit}
+.btn.hueso{background:var(--hueso);color:var(--negro)}
+.btn.linea{background:transparent;border:2px solid var(--hueso);color:var(--hueso)}
+.btn:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--hueso);outline-offset:2px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:22px;text-decoration:none;text-transform:uppercase}
+.logo span{color:var(--rojo)}
+.top nav a{margin-left:22px;text-decoration:none;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.hero{position:relative;min-height:82vh;display:grid;align-items:end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.35) contrast(1.15) brightness(.55)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,16,16,.2) 0%,rgba(17,16,16,.95) 92%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:56px;width:100%}
+.hero h1{font-size:clamp(48px,9.5vw,138px)}
+.hero h1 .r{color:var(--rojo)}
+.hero p{font-size:19px;max-width:560px;margin:18px 0 26px;color:#e6dfd4}
+.acc{display:flex;gap:12px;flex-wrap:wrap}
+.cinta{background:var(--rojo);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-family:"Dela Gothic One",sans-serif;font-size:20px;text-transform:uppercase}
+.cinta div{display:inline-block;animation:corre 26s linear infinite}
+.cinta span{margin:0 22px}
+@keyframes corre{to{transform:translateX(-50%)}}
+section{padding:80px 0}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--rojo);font-weight:700;margin-bottom:12px}
+h2{font-size:clamp(36px,5.4vw,70px);margin-bottom:20px}
+/* ticket */
+.turno .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:center}
+.turno .grid>div>p{color:#d6cfc4;max-width:440px}
+.ticket{display:grid;grid-template-columns:1fr 120px;background:var(--hueso);color:var(--negro);position:relative}
+.ticket form{padding:26px;display:grid;gap:15px;border-right:3px dashed var(--negro)}
+.ticket .talon{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:12px;background:var(--rojo);color:#fff}
+.talon b{font-family:"Dela Gothic One",sans-serif;font-size:30px;font-weight:400;writing-mode:vertical-rl;transform:rotate(180deg);text-transform:uppercase}
+.ticket::before,.ticket::after{content:"";position:absolute;right:108px;width:24px;height:24px;border-radius:50%;background:var(--negro)}
+.ticket::before{top:-12px}.ticket::after{bottom:-12px}
+.ticket h3{font-size:26px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{margin:0;font-size:14.5px;letter-spacing:0;text-transform:none;font-weight:500;border:2px solid var(--negro);padding:8px 14px;cursor:pointer}
+.chips input:checked+label{background:var(--negro);color:var(--hueso)}
+.chips input:focus-visible+label{outline:3px solid var(--rojo)}
+input[type=date]{font:inherit;padding:10px 12px;border:2px solid var(--negro);background:#fff;width:100%}
+.ticket .btn{width:100%}
+.mini{font-size:12.5px;color:#5b554e}
+/* opiniones */
+.desliza{display:none;color:var(--gris);font-size:13.5px;margin-bottom:12px}
+.carr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.op{background:var(--negro2);border:1px solid #2d2a28;padding:26px;display:flex;flex-direction:column;gap:16px}
+.op p{font-size:19px;line-height:1.4}
+.op small{margin-top:auto;color:var(--gris)}
+.op .st{color:var(--rojo);letter-spacing:3px}
+.grande{display:flex;align-items:baseline;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+.grande b{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:clamp(70px,10vw,140px);line-height:.9;color:var(--rojo)}
+.grande span{color:#d6cfc4;max-width:280px}
+/* sedes */
+.sedes{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sede{border:2px solid var(--hueso);padding:28px}
+.sede h3{font-size:34px;margin:6px 0 10px}
+.sede p{color:#d6cfc4}
+.sede .btn{margin-top:18px}
+.mapa iframe{width:100%;height:340px;border:0;margin-top:18px;filter:grayscale(1) invert(.9) contrast(.9)}
+/* ambiente */
+.amb{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.amb div{border-top:4px solid var(--rojo);padding-top:16px}
+.amb h3{font-size:30px;margin-bottom:8px}
+.amb p{color:#d6cfc4}
+footer{border-top:1px solid #2d2a28;padding:34px 0 40px;font-size:14px;color:var(--gris)}
+footer .logo{color:var(--hueso);display:inline-block;margin-bottom:10px}
+.barra{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(17,16,16,.96);border-top:1px solid #2d2a28;z-index:30}
+.barra a{flex:1;padding:13px}
+.aparece{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.aparece.si{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.aparece{opacity:1;transform:none;transition:none}.cinta div{animation:none}html{scroll-behavior:auto}}
+@media (max-width:840px){
+  body{font-size:16px}
+  .top nav{display:none}
+  .hero{min-height:74vh}
+  .hero .wrap{padding-bottom:34px}
+  .hero p{font-size:16.5px;margin:12px 0 20px}
+  .cinta{font-size:16px;padding:9px 0}
+  section{padding:50px 0}
+  .turno .grid,.sedes{grid-template-columns:1fr;gap:22px}
+  .ticket{grid-template-columns:1fr 64px}
+  .ticket::before,.ticket::after{right:52px}
+  .talon b{font-size:20px}
+  .ticket form{padding:20px}
+  .desliza{display:block}
+  .carr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -20px;padding:0 20px 8px}
+  .carr>*{flex:0 0 84%;scroll-snap-align:center}
+  .solo-compu{display:none}
+  .barra{display:flex}
+  .mapa iframe{height:230px}
+  main{display:flex;flex-direction:column}
+  #inicio{order:1}#turno{order:2}#opiniones{order:3}#sedes{order:4}
+}
+</style>
+</head>
+<body>
+<div class="band">Muestra preparada por newaves para Bárbaro's · No está publicada</div>
+<main>
+<div id="inicio">
+  <div class="hero">
+    <img src="https://gz0.googleusercontent.com/grass-cs/AABkmLelq8SRcwfa1WWT5W_9rOs_eiNcOkzEe2Z7LBORwthRIV2L3C8bhxcswlWt-wOJzMd3lcddrie2togNVkzQXuujGdScF7qlfaDz7uLHlC9y0cnimG9R91JQPZcxXcGFNTGMDcftST9exC-M=w1920-h1440-k-no" alt="Bárbaro's, Rondeau 166" referrerpolicy="no-referrer">
+    <header class="top" style="position:absolute;top:0;left:0;right:0;z-index:3;max-width:1160px;margin:0 auto;padding:18px 20px">
+      <a class="logo" href="#inicio">Bárbaro<span>'s</span></a>
+      <nav><a href="#turno">Turnos</a><a href="#opiniones">Opiniones</a><a href="#sedes">Sedes</a></nav>
+    </header>
+    <div class="wrap">
+      <p class="kicker">Barbería &amp; Amigos · Nueva Córdoba y Centro</p>
+      <h1>Cortesaki,<br>fernet <span class="r">y DJ.</span></h1>
+      <p>Cortes, perfilados y barbería tradicional con el ambiente que nombran todas las reseñas. Venís por orden de llegada o pedís tu turno acá y te lo confirman por WhatsApp.</p>
+      <div class="acc">
+        <a class="btn" href="#turno">Sacar turno</a>
+        <a class="btn linea" href="https://www.instagram.com/barbaros.cm" target="_blank" rel="noopener">@barbaros.cm</a>
+      </div>
+    </div>
+  </div>
+  <div class="cinta" aria-hidden="true"><div><span>5 estrellas · 337 opiniones</span><span>★</span><span>Rondeau 166</span><span>★</span><span>Independencia 227</span><span>★</span><span>Lunes a sábado</span><span>★</span><span>5 estrellas · 337 opiniones</span><span>★</span><span>Rondeau 166</span><span>★</span><span>Independencia 227</span><span>★</span><span>Lunes a sábado</span><span>★</span></div></div>
+</div>
+
+<section id="turno" class="turno">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Turnos</p>
+      <h2>Tu turno es tu entrada.</h2>
+      <p>Elegí sede, día, franja y con quién te querés cortar. El pedido llega al WhatsApp de la barbería y te confirman el horario. Sin páginas que se caen.</p>
+    </div>
+    <div class="ticket aparece">
+      <form id="f" novalidate>
+        <h3>Pedí tu turno</h3>
+        <div>
+          <label>Sede</label>
+          <div class="chips">
+            <input type="radio" name="sede" id="s1" value="Nueva Córdoba (Rondeau 166)" checked><label for="s1">Nueva Córdoba</label>
+            <input type="radio" name="sede" id="s2" value="Centro (Independencia 227)"><label for="s2">Centro</label>
+          </div>
+        </div>
+        <div>
+          <label for="dia">Día</label>
+          <input type="date" id="dia">
+        </div>
+        <div>
+          <label>Franja</label>
+          <div class="chips">
+            <input type="radio" name="franja" id="h1" value="a la mañana" checked><label for="h1">Mañana</label>
+            <input type="radio" name="franja" id="h2" value="a la tarde"><label for="h2">Tarde</label>
+            <input type="radio" name="franja" id="h3" value="a la noche"><label for="h3">Noche</label>
+          </div>
+        </div>
+        <div>
+          <label>Con quién</label>
+          <div class="chips">
+            <input type="radio" name="barber" id="b0" value="" checked><label for="b0">El que esté libre</label>
+            <input type="radio" name="barber" id="b1" value="Facu"><label for="b1">Facu</label>
+            <input type="radio" name="barber" id="b2" value="Rodrigo"><label for="b2">Rodrigo</label>
+            <input type="radio" name="barber" id="b3" value="Ivo"><label for="b3">Ivo</label>
+          </div>
+        </div>
+        <button class="btn" type="submit">Mandar por WhatsApp</button>
+        <p class="mini">Se abre WhatsApp con el mensaje armado. Nada se envía hasta que lo mandes vos.</p>
+      </form>
+      <div class="talon"><b>Admite uno</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" style="background:var(--negro2)">
+  <div class="wrap">
+    <div class="grande"><b>337</b><span>opiniones en Google, todas sumando para un 5,0 redondo.</span></div>
+    <p class="desliza">Deslizá para ver más →</p>
+    <div class="carr">
+      <article class="op"><span class="st">★★★★★</span><p>“La mejor barbería de Córdoba, los chicos son los más.”</p><small>Reseña en Google · noviembre 2026</small></article>
+      <article class="op"><span class="st">★★★★★</span><p>“Un lujo todo, desde la atención hasta los cortes que hacen. Hacen honor a su título ‘Barbería y amigos’. 10/10.”</p><small>Reseña en Google · julio 2026</small></article>
+      <article class="op"><span class="st">★★★★★</span><p>“Amplio local, atención hiper personalizada y gran clima de equipo. Me corté con Rodrigo: recomiendo.”</p><small>Reseña en Google · julio 2026</small></article>
+      <article class="op"><span class="st">★★★★★</span><p>“Alto ambiente: cortesaki + fernet + DJ en vivo. Ivo la rompés cortando.”</p><small>Reseña en Google · octubre 2026</small></article>
+      <article class="op"><span class="st">★★★★★</span><p>“Altísima calidad en cortes, muy buena onda de todos los chicos, la música, el ambiente, TODO.”</p><small>Reseña en Google · julio 2026</small></article>
+      <article class="op"><span class="st">★★★★★</span><p>“Facu le dejó muy lindo el pelo a mi novio, recomiendo.”</p><small>Reseña en Google · julio 2026</small></article>
+    </div>
+  </div>
+</section>
+
+<section class="solo-compu">
+  <div class="wrap">
+    <p class="kicker">El ambiente</p>
+    <h2>Más que un corte</h2>
+    <div class="amb">
+      <div><h3>Fernet</h3><p>De por medio mientras te cortás, como cuentan en las reseñas.</p></div>
+      <div><h3>DJ en vivo</h3><p>Música de fondo que convierte el corte en un rato con amigos.</p></div>
+      <div><h3>El equipo</h3><p>Facu, Rodrigo, Ivo y los chicos: prolijos y con la mejor onda.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sedes">
+  <div class="wrap">
+    <p class="kicker">Dónde estamos</p>
+    <h2>Dos sedes</h2>
+    <div class="sedes">
+      <div class="sede"><span class="kicker">Nueva Córdoba</span><h3>Rondeau 166</h3><p>Lunes a sábado, de 10 a 22 h. Domingo cerrado.</p><a class="btn hueso" href="https://www.google.com/maps/search/?api=1&query=BARBARO'S%20%7C%20Barber%C3%ADa%20%26%20Amigos&query_place_id=ChIJjXCiLwCjMpQR3YicjQtT9t0" target="_blank" rel="noopener">Cómo llegar</a></div>
+      <div class="sede"><span class="kicker">Centro</span><h3>Independencia 227</h3><p>Por orden de llegada y por turnos.</p><a class="btn hueso" href="https://www.google.com/maps/search/?api=1&query=Independencia%20227%2C%20C%C3%B3rdoba%2C%20Argentina" target="_blank" rel="noopener">Cómo llegar</a></div>
+    </div>
+    <div class="mapa solo-compu"><iframe title="Mapa de Bárbaro's Nueva Córdoba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rondeau%20166%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Bárbaro<span style="color:var(--rojo)">'s</span></span>
+    <p>Barbería &amp; Amigos · Rondeau 166 (Nueva Córdoba) · Independencia 227 (Centro) · <a href="tel:+543544630528">3544 63-0528</a> · <a href="https://www.instagram.com/barbaros.cm" target="_blank" rel="noopener">@barbaros.cm</a></p>
+    <p style="margin-top:14px">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</p>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn" href="#turno">Sacar turno</a>
+  <a class="btn linea" href="tel:+543544630528">Llamar</a>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('f'),d=document.getElementById('dia');
+  var hoy=new Date();d.min=hoy.toISOString().slice(0,10);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var s=f.querySelector('input[name=sede]:checked').value;
+    var h=f.querySelector('input[name=franja]:checked').value;
+    var b=f.querySelector('input[name=barber]:checked').value;
+    var dia='';
+    if(d.value){var p=d.value.split('-');var dt=new Date(+p[0],+p[1]-1,+p[2]);dia=dt.toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'numeric'});}
+    if(dt&&dt.getDay()===0){alert('Los domingos está cerrado. Elegí otro día.');return;}
+    var t='Hola Bárbaro\'s! Quiero un turno en '+s+(dia?' para el '+dia:'')+', '+h+(b?', con '+b:'')+'. ¿Qué horario tienen?';
+    window.open('https://wa.me/5493544630528?text='+encodeURIComponent(t),'_blank','noopener');
+  });
+  var els=document.querySelectorAll('.aparece');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('si')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('si');io.unobserve(x.target);}})},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gattos · Medicina veterinaria solo para gatos · Nueva Córdoba</title>
+<meta name="description" content="Veterinaria pensada exclusivamente para gatos en Rondeau 131, Nueva Córdoba. M.V. Abigail Costamagna y M.V. Raquel Ramos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#f7efe3;--papel2:#efe2cf;--tinta:#2e2a24;--terra:#c2603a;--oliva:#6f7a4a;--suave:#8a7e6d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--papel);color:var(--tinta);line-height:1.55;font-size:17px;padding-bottom:76px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.band{background:var(--tinta);color:var(--papel);font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.1}
+.mano{font-family:Caveat,cursive;color:var(--terra);font-size:26px;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn.sec{background:transparent;color:var(--tinta);border:2px solid var(--tinta)}
+.btn:focus-visible{outline:3px solid var(--oliva);outline-offset:3px}
+/* portada */
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.marca{font-family:"Young Serif",serif;font-size:26px;letter-spacing:.01em;display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca svg{width:30px;height:30px}
+.top nav a{margin-left:22px;text-decoration:none;font-weight:500;font-size:15px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:28px 0 64px}
+.hero h1{font-size:clamp(40px,6.4vw,76px)}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero p.lead{font-size:19px;max-width:520px;margin:20px 0 28px;color:#4a443b}
+.hero .acc{display:flex;gap:12px;flex-wrap:wrap}
+.foto-hero{position:relative}
+.foto-hero img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 24px 24px;filter:saturate(1.05) contrast(1.03)}
+.sello{position:absolute;left:-34px;bottom:34px;width:132px;height:132px;border-radius:50%;background:var(--oliva);color:var(--papel);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);box-shadow:0 10px 30px rgba(46,42,36,.18)}
+.sello b{font-family:"Young Serif",serif;font-size:24px;font-weight:400;display:block;line-height:1}
+.sello small{font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.nota{display:flex;gap:16px;align-items:center;margin-top:26px;font-size:15px;color:var(--suave)}
+.nota strong{color:var(--tinta);font-size:20px;font-family:"Young Serif",serif;font-weight:400}
+/* secciones */
+section{padding:72px 0}
+.kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--oliva);font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:18px}
+/* turnos */
+.turnos{background:var(--papel2)}
+.ficha{background:#fffaf2;border:1.5px solid #d9c8ae;border-radius:22px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;box-shadow:0 2px 0 #d9c8ae}
+.ficha h3{font-size:28px;margin-bottom:8px}
+.renglon{display:flex;justify-content:space-between;border-bottom:1px dashed #d9c8ae;padding:9px 0;font-size:15.5px}
+.renglon span:last-child{font-weight:700}
+.chico{font-size:14px;color:var(--suave);margin-top:12px}
+/* equipo */
+.equipo{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:26px}
+.vete{background:#fffaf2;border-radius:22px;padding:26px;border:1.5px solid #e4d5bf}
+.vete .ini{width:58px;height:58px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:"Young Serif",serif;font-size:24px;margin-bottom:14px}
+.vete:nth-child(2) .ini{background:var(--oliva)}
+.vete h3{font-size:26px}
+.vete p{color:#4a443b;margin-top:8px}
+.vete q{display:block;margin-top:12px;font-style:italic;color:var(--tinta)}
+/* carrusel */
+.desliza{font-size:13.5px;color:var(--suave);margin-bottom:12px;display:none}
+.carr{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.op{background:#fffaf2;border-radius:20px;padding:24px;border:1.5px solid #e4d5bf;display:flex;flex-direction:column;gap:14px}
+.op p{font-size:16px}
+.op .quien{margin-top:auto;font-size:14px;color:var(--suave)}
+.op .quien b{color:var(--tinta)}
+.estrellas{color:var(--terra);letter-spacing:2px;font-size:14px}
+/* pacientes */
+.pacientes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.pacientes figure{position:relative}
+.pacientes img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px}
+.pacientes figcaption{position:absolute;left:10px;bottom:10px;background:var(--papel);padding:3px 12px;border-radius:999px;font-family:Caveat,cursive;font-size:21px;color:var(--terra)}
+/* como */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:20px;counter-reset:p}
+.paso{border-top:2px solid var(--tinta);padding-top:16px}
+.paso h3{font-size:23px;margin-bottom:6px}
+.paso h3::before{counter-increment:p;content:counter(p,decimal-leading-zero) "  ";color:var(--terra)}
+/* donde */
+.donde{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:stretch}
+.donde iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:22px;filter:sepia(.25) saturate(.9)}
+.horas{list-style:none;margin:14px 0 22px}
+.horas li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed #d9c8ae;max-width:380px}
+footer{background:var(--tinta);color:#d8ccb9;padding:34px 0 40px;font-size:14px}
+footer .marca{color:var(--papel);font-size:22px;margin-bottom:8px}
+.barra{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(247,239,227,.96);border-top:1px solid #d9c8ae;z-index:20;backdrop-filter:blur(6px)}
+.barra a{flex:1;justify-content:center;padding:13px}
+.aparece{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.aparece.si{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.aparece{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:820px){
+  body{font-size:16px}
+  .top nav{display:none}
+  .hero{grid-template-columns:1fr;gap:26px;padding:6px 0 40px}
+  .foto-hero{order:-1}
+  .foto-hero img{aspect-ratio:16/10;border-radius:120px 120px 20px 20px}
+  .sello{left:auto;right:10px;bottom:-26px;width:104px;height:104px}
+  .sello b{font-size:19px}
+  .hero p.lead{font-size:17px;margin:14px 0 20px}
+  section{padding:48px 0}
+  .ficha{grid-template-columns:1fr;padding:22px}
+  .equipo{grid-template-columns:1fr}
+  .desliza{display:block}
+  .carr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:8px;margin:0 -20px;padding-left:20px;padding-right:20px}
+  .carr>*{flex:0 0 84%;scroll-snap-align:center}
+  .pacientes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:22px -20px 0;padding:0 20px 6px}
+  .pacientes figure{flex:0 0 62%;scroll-snap-align:center}
+  .solo-compu{display:none}
+  .donde{grid-template-columns:1fr}
+  .donde iframe{min-height:240px}
+  .barra{display:flex}
+  main{display:flex;flex-direction:column}
+  #inicio{order:1}#turnos{order:2}#opiniones{order:3}#equipo{order:4}#donde{order:5}
+}
+</style>
+</head>
+<body>
+<div class="band">Muestra preparada por newaves para Gattos Medicina Veterinaria Integral · No está publicada</div>
+
+<main>
+<div id="inicio" class="wrap">
+  <header class="top">
+    <a class="marca" href="#inicio" aria-label="Gattos">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 34V12l7 6h14l7-6v22z" fill="#c2603a"/><circle cx="15" cy="25" r="2.2" fill="#f7efe3"/><circle cx="25" cy="25" r="2.2" fill="#f7efe3"/></svg>
+      Gattos
+    </a>
+    <nav><a href="#equipo">Las vetes</a><a href="#opiniones">Opiniones</a><a href="#donde">Dónde estamos</a><a href="#turnos">Turnos</a></nav>
+  </header>
+  <div class="hero">
+    <div>
+      <p class="mano">pensada solo para ellos</p>
+      <h1>Una vete donde tu gato <em>no es un perro chico.</em></h1>
+      <p class="lead">Gattos es medicina veterinaria exclusivamente felina, en Rondeau 131, Nueva Córdoba. Consultas sin apuro, explicaciones claras y seguimiento de verdad.</p>
+      <div class="acc">
+        <a class="btn" href="https://gattos.setmore.com/" target="_blank" rel="noopener">Sacar turno</a>
+        <a class="btn sec" href="https://wa.me/5493512070162?text=Hola%20Gattos%2C%20quer%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+      <div class="nota"><strong>5,0</strong><span>con 59 opiniones en Google<br>de familias con michis</span></div>
+    </div>
+    <div class="foto-hero aparece">
+      <img src="https://gz0.googleusercontent.com/grass-cs/AABkmLd5GZ2MOM4UOJw-UFOw5tPua8XEyPxFzXboLNkgbe8fUhLVJ48wRJuHnnV_aqwZzfwGf5YRZnz50UraPmL5n6Ws0iZEcsGMwkfEzUKwrsV7NHTcojpkRdSwWbCL7VH_RgprNqDAo6XshOcQ=w1200-h1500-k-no" alt="Simba, paciente de Gattos" referrerpolicy="no-referrer">
+      <div class="sello"><div><b>Solo<br>gatos</b><small>Nva. Córdoba</small></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="turnos" class="turnos">
+  <div class="wrap">
+    <div class="ficha aparece">
+      <div>
+        <p class="kicker">Turnos</p>
+        <h3>Se atiende con cita previa</h3>
+        <p>Elegí día y horario en el turnero de Gattos y listo. Si tenés una duda antes de venir, escribinos por WhatsApp.</p>
+        <p style="margin-top:18px"><a class="btn" href="https://gattos.setmore.com/" target="_blank" rel="noopener">Ver horarios libres</a></p>
+        <p class="chico">El turnero es el mismo que ya usan hoy, ahora dentro de su propia web.</p>
+      </div>
+      <div>
+        <div class="renglon"><span>Lunes a viernes</span><span>11 a 18:30</span></div>
+        <div class="renglon"><span>Turnos online, sábados</span><span>10 a 13</span></div>
+        <div class="renglon"><span>Domingos</span><span>Cerrado</span></div>
+        <div class="renglon"><span>Dirección</span><span>Rondeau 131</span></div>
+        <div class="renglon"><span>Teléfono</span><span><a href="tel:+543512070162">351 207-0162</a></span></div>
+        <div class="renglon"><span>Accesible en silla de ruedas</span><span>Sí</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <p class="kicker">Quiénes los atienden</p>
+    <h2>Abi y Raque, las vetes de la casa</h2>
+    <div class="equipo">
+      <article class="vete aparece">
+        <div class="ini">A</div>
+        <h3>M.V. Abigail Costamagna</h3>
+        <p>La que muchos llaman Abi. En las reseñas aparece una y otra vez por dar con diagnósticos difíciles y por tener paciencia con los gatos más miedosos.</p>
+        <q>Pasé por varios veterinarios antes de llegar a Abigail, que pudo dar con el diagnóstico de mi gatita.</q>
+      </article>
+      <article class="vete aparece">
+        <div class="ini">R</div>
+        <h3>M.V. Raquel Ramos</h3>
+        <p>Raque para los de siempre. Las familias destacan cómo explica, acompaña y hace el seguimiento de los tratamientos largos.</p>
+        <q>Te explica, acompaña, ayuda, enseña. Pocos lugares hacen sentir así de cómodas a nuestras mascotas.</q>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" style="background:#fffaf2">
+  <div class="wrap">
+    <p class="kicker">Lo que cuentan en Google</p>
+    <h2>Las familias de los michis</h2>
+    <p class="desliza">Deslizá para ver más →</p>
+    <div class="carr">
+      <article class="op"><span class="estrellas">★★★★★</span><p>“Abi y Raque las mejores vetes que existen. Mi gato Simba las ama, a los 4 meses literalmente le salvaron la vida.”</p><span class="quien"><b>Yaz</b> · con Simba</span></article>
+      <article class="op"><span class="estrellas">★★★★★</span><p>“Llevamos 9 meses tratando a Lenny por su VIF. Lo que más nos gusta es el tiempo que se toman para atendernos: las consultas son súper completas y el seguimiento es un diez.”</p><span class="quien"><b>Eve</b> · con Lenny</span></article>
+      <article class="op"><span class="estrellas">★★★★★</span><p>“Mi gato con obstrucción urinaria mejoró muchísimo con el tratamiento. Súper atenta y de mucha confianza.”</p><span class="quien"><b>Cele</b> · con Chisito</span></article>
+      <article class="op"><span class="estrellas">★★★★★</span><p>“Gala tuvo pánico a los veterinarios desde chiquita, pero Abi supo cómo hacer para que cada sesión se sienta más cómoda. Ahora se pone las vacunas sin un quejido.”</p><span class="quien"><b>Reseña en Google</b> · con Gala</span></article>
+      <article class="op"><span class="estrellas">★★★★★</span><p>“Son las mejores. Muy atentas y cariñosas en todo momento. Ellas me hicieron conocer a mi Terra.”</p><span class="quien"><b>Agus</b> · con Terra</span></article>
+      <article class="op"><span class="estrellas">★★★★★</span><p>“Las mejores veterinarias de la tierra, las más cálidas y copadas. Mielcita las elige siempre.”</p><span class="quien"><b>Valen</b> · con Mielcita</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="solo-compu">
+  <div class="wrap">
+    <p class="kicker">Pacientes de la casa</p>
+    <h2>Algunos de los que ya pasaron</h2>
+    <p style="color:#4a443b;max-width:560px">Fotos que subieron sus familias a Google después de la consulta.</p>
+    <div class="pacientes">
+      <figure class="aparece"><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdqNFkzfS453SJvWDaf4DX19v_jc-uZKqIQ3rN-2O2Yr3yZRCjCCUOsSgO6ZzgIS-eFz4s_O-Uf6z-trqhUxcQVO9tnx3KXp0kp2GafRkKWocnzALFD0O7W-U7RfX_j0gPzeY0LDxGNWDZI=w800-h800-k-no" alt="Terra" referrerpolicy="no-referrer"><figcaption>Terra</figcaption></figure>
+      <figure class="aparece"><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdNvCIOCQ7_E2s-Bj5rBi6r0QFG1DMba6TLXfAFx2CSuBWhrk6ceLGrRIwju5tM33PWZb3Q4sXsdtcwXe9N7kcZiIY_UdzJM5MFBpwWKA4En0LQlnzdeK-x5JlCW0ADo5yVbeAQrXEnOCzD=w800-h800-k-no" alt="Chisito" referrerpolicy="no-referrer"><figcaption>Chisito</figcaption></figure>
+      <figure class="aparece"><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLd4kTE_5yBc-gS9phK70g78R2eLzPFeMmLdtmGbWw3zflF0GZS7FXuqKkrlHbBggIKkQpFqgIf2ZfORMi_Ss-MuK6eVQiA7bQFJhD2yRwrjV7Hvb2y-XfS1kT6v10Iy1zdIY7wIQBkMxJog=w800-h800-k-no" alt="Lenny" referrerpolicy="no-referrer"><figcaption>Lenny</figcaption></figure>
+      <figure class="aparece"><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLcIChcHryDXGNLW2MNkdfzs0fVtN46MHJSyFAfrt7Uf58PnsJBHz6kgSj6sx4_P20bgioL6r2M2Ri-R6426BTW6AZIKrOzJvWictUWgFLQ_P1Bq7c6TYb5V7uOMZoqWMMacTLT2Rr4GOdWC=w800-h800-k-no" alt="Mielcita" referrerpolicy="no-referrer"><figcaption>Mielcita</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="solo-compu" style="background:var(--papel2)">
+  <div class="wrap">
+    <p class="kicker">Cómo es venir a Gattos</p>
+    <h2>Sin perros en la sala de espera</h2>
+    <div class="pasos">
+      <div class="paso"><h3>Turno sin vueltas</h3><p>Lo sacás online, eligiendo el horario que te queda cómodo.</p></div>
+      <div class="paso"><h3>Consulta sin apuro</h3><p>Las familias lo repiten: se toman el tiempo para revisar, explicar y sacarte todas las dudas.</p></div>
+      <div class="paso"><h3>Seguimiento</h3><p>En tratamientos largos, como el de Lenny, acompañan cada paso y ajustan lo que haga falta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="donde">
+  <div class="wrap donde">
+    <div>
+      <p class="kicker">Dónde estamos</p>
+      <h2>Rondeau 131, Nueva Córdoba</h2>
+      <ul class="horas">
+        <li><span>Lunes a viernes</span><b>11 a 18:30</b></li>
+        <li><span>Sábado y domingo</span><b>Cerrado</b></li>
+      </ul>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Gattos%20Medicina%20Veterinaria%20Integral&query_place_id=ChIJ18LtIwCjMpQRBE6EXvMy8-A" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+    <iframe title="Mapa de Gattos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rondeau%20131%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="marca">Gattos</div>
+    <p>Medicina veterinaria integral, solo para gatos · Rondeau 131, Nueva Córdoba · <a href="tel:+543512070162">351 207-0162</a> · <a href="mailto:gattosveterinaria@gmail.com">gattosveterinaria@gmail.com</a></p>
+    <p style="margin-top:14px;opacity:.75">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</p>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn" href="https://gattos.setmore.com/" target="_blank" rel="noopener">Sacar turno</a>
+  <a class="btn sec" href="tel:+543512070162">Llamar</a>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.aparece');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('si')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('si');io.unobserve(x.target);}})},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
