@@ -12,3 +12,4 @@
 - La lámina es un HTML con animaciones SOLO en CSS (keyframes con delays; las infinitas para flujos que se mueven). Nada de JavaScript con tiempo real: el grabador adelanta las animaciones de CSS.
 - Ejemplo: `ejemplo-lamina-animada.html` (canales → agente → agenda). Fondo azul noche, letras blancas, verde #38E0A0, contador "01 / 08", "DESLIZÁ →".
 - Ideas que lucen en movimiento: agentes que reciben y responden, embudos que se llenan, gráficos de crecimiento que suben, calendarios que se completan, antes/después.
+- Íconos de apps (WhatsApp, Instagram, etc.): usar el dibujo completo (el de WhatsApp está en ejemplo-lamina-animada.html) y revisar con zoom que se vean enteros antes de mandar.
