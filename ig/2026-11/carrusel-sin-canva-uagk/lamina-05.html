@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Lámina 05 (animada): el guion se arma lámina por lámina y cada parte se tilda. Se graba con ig_video.py. -->
+<link rel="stylesheet" href="noche.css">
+<style>
+.step{position:absolute;left:80px;top:150px;opacity:0;animation:fade .4s ease-out .1s forwards}
+h1{top:215px}
+h1 span{display:block;opacity:0;animation:fade .5s ease-out forwards}
+.l1{animation-delay:.3s!important}.l2{animation-delay:.8s!important;color:#38E0A0}
+svg.rail{position:absolute;left:0;top:0}
+.ln{fill:none;stroke:#2A3A57;stroke-width:4;opacity:0;animation:show .3s linear 1.3s forwards}
+.fl{fill:none;stroke:#38E0A0;stroke-width:6;stroke-linecap:round;stroke-dasharray:14 200;opacity:0;animation:show .2s linear 5.6s forwards,flow 1.3s linear 5.6s infinite}
+.row{position:absolute;left:80px;right:80px;height:104px;display:flex;align-items:center;gap:30px;opacity:0;animation:fade .4s ease-out forwards}
+.dotn{flex:none;width:70px;height:70px;border-radius:50%;background:#111B2D;border:3px solid #2A3A57;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#8D99AE;position:relative}
+.dotn .ok{position:absolute;inset:-3px;border-radius:50%;background:#38E0A0;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.4);animation:pop .35s cubic-bezier(.2,1.4,.4,1) forwards}
+.dotn .ok svg{width:36px;height:36px}
+.box{flex:1;height:92px;border-radius:24px;background:#111B2D;border:2px solid #22314C;display:flex;align-items:center;justify-content:space-between;padding:0 30px;font-size:34px;font-weight:700}
+.box small{font-size:22px;font-weight:700;color:#5E6B82;letter-spacing:2px}
+.box.lit{animation:lit .35s ease-out forwards}
+@keyframes lit{to{border-color:#38E0A0;background:#13243A}}
+.r1{top:430px;animation-delay:1.5s}.r2{top:542px;animation-delay:1.8s}.r3{top:654px;animation-delay:2.1s}
+.r4{top:766px;animation-delay:2.4s}.r5{top:878px;animation-delay:2.7s}.r6{top:990px;animation-delay:3s}
+.r1 .ok,.r1 .box{animation-delay:3.5s}.r2 .ok,.r2 .box{animation-delay:3.85s}.r3 .ok,.r3 .box{animation-delay:4.2s}
+.r4 .ok,.r4 .box{animation-delay:4.55s}.r5 .ok,.r5 .box{animation-delay:4.9s}.r6 .ok,.r6 .box{animation-delay:5.25s}
+.bub{position:absolute;left:80px;right:80px;top:1118px;padding:18px 30px;border-radius:26px 26px 26px 8px;background:#16233A;border:2px solid #2A3A57;font-size:28px;line-height:1.35;font-weight:600;opacity:0;animation:fade .45s ease-out 5.8s forwards}
+.bub .who{font-size:18px;font-weight:800;letter-spacing:4px;color:#8D99AE;margin-bottom:4px}
+</style></head><body>
+<div class="top"><div>newaves<span class="dot">.</span></div><div class="c">05 / 10</div></div>
+<div class="step">PASO 02</div>
+<h1><span class="l1">Pedí el guion</span><span class="l2">antes que el diseño.</span></h1>
+
+<svg class="rail" width="1080" height="1350">
+  <path class="ln" d="M115 500 L115 1030"/>
+  <path class="fl" d="M115 500 L115 1030"/>
+</svg>
+
+<div class="row r1"><div class="dotn">1<span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="box">Portada que frena el dedo<small>LÁMINA 1</small></div></div>
+<div class="row r2"><div class="dotn">2<span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="box">El dolor (o una prueba)<small>LÁMINA 2</small></div></div>
+<div class="row r3"><div class="dotn">3<span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="box">El giro<small>LÁMINA 3</small></div></div>
+<div class="row r4"><div class="dotn">4<span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="box">Pasos, uno por lámina<small>4 A 8</small></div></div>
+<div class="row r5"><div class="dotn">5<span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="box">Una frase de cierre<small>LÁMINA 9</small></div></div>
+<div class="row r6"><div class="dotn">6<span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="box">Pedido con palabra clave<small>LÁMINA 10</small></div></div>
+
+<div class="bub"><div class="who">VOS</div>“Primero solo el guion, lámina por lámina. Todavía no diseñes.”</div>
+
+<div class="foot"><div class="who"><img src="../../plantilla/newaves-isotipo-blanco.svg">@somosnewaves</div><div class="sw">DESLIZÁ →</div></div>
+</body></html>

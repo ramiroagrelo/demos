@@ -1,0 +1,31 @@
+/* Noche en movimiento · estilo compartido de las láminas de este carrusel */
+@font-face{font-family:Figtree;font-weight:400;src:url(../../plantilla/fonts/figtree-latin-400-normal.woff2)}
+@font-face{font-family:Figtree;font-weight:500;src:url(../../plantilla/fonts/figtree-latin-500-normal.woff2)}
+@font-face{font-family:Figtree;font-weight:700;src:url(../../plantilla/fonts/figtree-latin-700-normal.woff2)}
+@font-face{font-family:Figtree;font-weight:800;src:url(../../plantilla/fonts/figtree-latin-800-normal.woff2)}
+@font-face{font-family:Caveat;font-weight:700;src:url(../../plantilla/fonts/caveat-latin-700-normal.woff2)}
+*{box-sizing:border-box}
+html,body{margin:0;width:1080px;height:1350px;overflow:hidden}
+body{background:radial-gradient(90% 60% at 50% 55%,#0F1C33 0%,#070D1A 70%);font-family:Figtree;color:#fff;position:relative}
+.top{position:absolute;top:58px;left:80px;right:80px;display:flex;justify-content:space-between;font-weight:800;font-size:34px}
+.top .c{font-size:24px;letter-spacing:3px;opacity:.5;font-weight:700}
+.dot,.g{color:#38E0A0}
+h1{position:absolute;left:80px;right:80px;top:150px;margin:0;font-size:84px;line-height:1.04;letter-spacing:-2px;font-weight:800}
+.lead{font-size:34px;line-height:1.4;color:#AEB8C8;font-weight:500}
+.lead b{color:#fff;font-weight:700}
+.hand{font-family:Caveat;font-weight:700;color:#38E0A0;font-size:52px;line-height:1}
+.step{display:inline-block;font-size:24px;font-weight:800;letter-spacing:4px;color:#070D1A;background:#38E0A0;border-radius:30px;padding:8px 18px}
+.card{background:#111B2D;border:2px solid #22314C;border-radius:30px}
+.mono{font-family:ui-monospace,"DejaVu Sans Mono",Menlo,monospace}
+.foot{position:absolute;left:80px;right:80px;bottom:52px;display:flex;justify-content:space-between;align-items:center;font-size:26px;font-weight:700}
+.foot .who{display:flex;align-items:center;gap:14px}
+.foot img{width:40px}
+.foot .sw{letter-spacing:3px;font-size:22px;opacity:.7}
+.ej{font-size:18px;color:#5E6B82;font-weight:500}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@keyframes show{to{opacity:1}}
+@keyframes hide{to{opacity:0}}
+@keyframes flow{from{stroke-dashoffset:214}to{stroke-dashoffset:0}}
+@keyframes glow{from{opacity:.12}to{opacity:.38}}
+@keyframes type{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
