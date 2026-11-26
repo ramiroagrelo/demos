@@ -1,0 +1,11 @@
+{"slug":"leads-que-se-enfrian","slides":[
+{"tipo":"portada","etiqueta":"Leads que se enfrían","titulo":"Te escriben a las 23:40.\nVos contestás a las <m>9:15.</m>","nota":"…y ya le compró a otro"},
+{"tipo":"texto","titulo":"Lo que pasa en esas 9 horas:","chat":[{"txt":"Hola! ¿Cuánto sale la mentoría? Quiero arrancar este mes","hora":"23:40"},{"sep":"9 horas en visto"},{"txt":"¡Hola! Perdón la demora, te paso la info 🙌","yo":true,"hora":"9:15"},{"txt":"Gracias! Ya arranqué con otra persona anoche","hora":"9:22"}]},
+{"tipo":"frase","titulo":"No es falta de ganas.\nEs que <m>dormís.</m>","nota":"(y está bien dormir)"},
+{"tipo":"paso","n":"01","titulo":"Juntá lo que siempre respondés","cuerpo":"Casi todos los mensajes preguntan lo mismo. Escribilo una vez:","chips":["Precios","Qué incluye","Horarios","Cómo se paga","+Casos reales"]},
+{"tipo":"paso","n":"02","titulo":"Dáselo a un asistente en tu WhatsApp","flujo":["Te escriben a las 23:40","Lee <b>tus</b> datos y tu forma de hablar","Responde en segundos"]},
+{"tipo":"paso","n":"03","titulo":"Que pregunte lo que preguntarías vos","lista":["¿Qué querés lograr en 3 meses?","¿Ya trabajaste con alguien antes?","¿Cuándo te gustaría arrancar?"],"nota":"así sabés quién está listo"},
+{"tipo":"paso","n":"04","titulo":"Que agende y te avise","tarjeta":{"k":"Nueva llamada","t":"Mañana · 10:00","s":"Quiere arrancar este mes. Ya trabajó con otro coach."}},
+{"tipo":"frase","titulo":"No reemplaza tu charla.\nHace que <m>llegue.</m>","oscuro":true},
+{"tipo":"cta","titulo":"¿Querés la guía para armar el tuyo?","palabra":"ASISTENTE","cuerpo":"y te la mando por mensaje.","nota":"gratis, sin vueltas"}
+]}
