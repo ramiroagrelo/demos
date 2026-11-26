@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nuit Estética Integral · Nueva Córdoba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--noche:#1b2140;--noche2:#252c52;--perla:#efe9f2;--oro:#d9a38f;--tinta:#141830;--gris:#a8a6bd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--noche);color:var(--perla);line-height:1.55;padding-bottom:76px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.muestra{background:var(--oro);color:var(--tinta);font-size:.78rem;text-align:center;padding:.45rem 1rem;font-weight:700;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.marca{font-family:Marcellus,serif;font-weight:400;letter-spacing:.01em}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(1px 1px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 72% 9%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 88% 42%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 33% 64%,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 58% 82%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 6% 90%,#fff4 50%,transparent 51%)}
+main,header,footer{position:relative;z-index:1}
+/* portada */
+.hero{padding-top:34px;padding-bottom:30px;display:grid;gap:26px}
+.marca{font-size:1rem;letter-spacing:.32em;text-transform:uppercase;color:var(--oro);display:flex;align-items:center;gap:.6rem}
+.luna{width:34px;height:34px;border-radius:50%;box-shadow:inset -9px 0 0 0 var(--oro);transform:rotate(-20deg);flex:none}
+.hero h1{font-size:clamp(2.5rem,11vw,5.4rem);line-height:1.02;margin:.35em 0 .3em}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero p.lead{font-size:1.08rem;color:#d9d4e3;max-width:34ch}
+.datos{display:flex;gap:1.4rem;margin:1.2rem 0 1.5rem;font-size:.9rem;color:var(--gris)}
+.datos b{display:block;font-family:Marcellus,serif;font-size:1.6rem;color:var(--perla);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--oro);color:var(--tinta);text-decoration:none;font-weight:700;padding:.95rem 1.4rem;border-radius:999px;border:0;font-size:1rem;cursor:pointer;font-family:inherit}
+.btn.sec{background:transparent;color:var(--perla);border:1px solid #ffffff40}
+.acciones{display:flex;gap:.7rem;flex-wrap:wrap}
+.foto-hero{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:4/5;background:var(--noche2);max-height:560px}
+.foto-hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.04)}
+.foto-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#1b214099)}
+/* fases */
+.fase{display:flex;align-items:center;gap:.7rem;color:var(--oro);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:.9rem}
+.fase i{width:16px;height:16px;border-radius:50%;border:1px solid var(--oro);display:inline-block;position:relative;overflow:hidden}
+.fase i:after{content:"";position:absolute;inset:0;background:var(--oro);transform:translateX(var(--f,50%));border-radius:50%}
+section{padding:46px 0}
+h2{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.1;margin-bottom:.6rem}
+.sub{color:var(--gris);max-width:52ch;margin-bottom:1.4rem}
+/* turno */
+.turno{background:var(--perla);color:var(--tinta);border-radius:22px;padding:22px}
+.turno h2{color:var(--tinta)}
+.turno .sub{color:#555a77}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1.1rem}
+.chip{border:1px solid #1b214033;background:#fff;color:var(--tinta);padding:.55rem .85rem;border-radius:999px;font:500 .92rem Karla,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--noche);color:var(--perla);border-color:var(--noche)}
+.turno label{font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#555a77;display:block}
+.turno input{width:100%;padding:.8rem;border-radius:12px;border:1px solid #1b214033;font:1rem Karla,sans-serif;margin:.4rem 0 1rem}
+.turno .btn{background:var(--noche);color:var(--perla);width:100%}
+.nota{font-size:.8rem;color:#6b6f88;margin-top:.7rem}
+/* tratamientos */
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{height:4px}.rail::-webkit-scrollbar-thumb{background:#ffffff30;border-radius:4px}
+.trat{scroll-snap-align:start;flex:0 0 78%;max-width:300px;border:1px solid #ffffff22;border-radius:18px;padding:20px;background:#ffffff08}
+.trat h3{font-size:1.3rem;margin-bottom:.35rem}
+.trat p{color:#cfcadb;font-size:.95rem}
+.trat small{display:block;margin-top:.8rem;color:var(--oro);font-size:.8rem}
+.desliza{font-size:.8rem;color:var(--gris);margin-top:.4rem}
+/* opiniones */
+.op{scroll-snap-align:start;flex:0 0 86%;max-width:380px;background:var(--noche2);border-radius:18px;padding:22px;position:relative}
+.op:before{content:"“";font-family:Marcellus,serif;font-size:4rem;line-height:1;color:var(--oro);position:absolute;top:6px;right:16px;opacity:.6}
+.op p{font-size:1.02rem;margin-bottom:.9rem}
+.op cite{font-style:normal;color:var(--oro);font-size:.88rem}
+/* espacio */
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.galeria img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;filter:saturate(.9)}
+.flor{border-left:2px solid var(--oro);padding-left:16px;margin-top:1.4rem;color:#d9d4e3;max-width:56ch}
+/* dónde */
+.donde{display:grid;gap:18px}
+.horas{list-style:none;border-top:1px solid #ffffff22}
+.horas li{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid #ffffff22}
+.horas li.hoy{color:var(--oro)}
+iframe{width:100%;height:280px;border:0;border-radius:18px;filter:grayscale(.3) contrast(.95)}
+footer{padding:30px 0 40px;color:var(--gris);font-size:.82rem;text-align:center}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;padding:10px 12px;background:#141830ee;backdrop-filter:blur(6px);border-top:1px solid #ffffff1a}
+.barra .btn{flex:1;padding:.85rem}
+.solo-compu{display:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.ok{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (min-width:900px){
+ body{padding-bottom:0}.barra{display:none}.solo-compu{display:block}
+ .hero{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:70px;padding-bottom:50px}
+ .turno{padding:40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+ .trat{flex:0 0 31%}.op{flex:0 0 32%}
+ .galeria{grid-template-columns:repeat(4,1fr)}
+ .donde{grid-template-columns:1fr 1.2fr;align-items:start}
+ iframe{height:360px}
+ .desliza{display:none}
+}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="muestra">Muestra preparada por newaves para Nuit Estética Integral · No está publicada</div>
+<header class="wrap hero">
+ <div>
+  <div class="marca"><span class="luna" aria-hidden="true"></span>Nuit · Estética integral</div>
+  <h1>Te vas más <em>liviana</em> de lo que llegaste.</h1>
+  <p class="lead">Limpiezas faciales, depilación definitiva, cama solar y aparatología en Santiago Derqui 136, Nueva Córdoba. Un lugar que, como dicen ustedes, siempre está limpio y huele súper rico.</p>
+  <div class="datos"><div><b>4,6</b>en Google</div><div><b>291</b>opiniones</div><div><b>L a S</b>con turno</div></div>
+  <div class="acciones"><a class="btn" href="#turno">Pedí tu turno</a><a class="btn sec" href="tel:+543512494043">351 249-4043</a></div>
+ </div>
+ <div class="foto-hero"><img src="https://gz0.googleusercontent.com/grass-cs/AABkmLcv2bsUvFzK3Ncu6X7SMmp9HxKzhIWmHFTWawY3X4v1s0rDxbn7ZlevvD0SBS6IUOKlX4jZNe_4fci8fvvUOkiBlHM_Icdoor3qy3RTiJ_fe1rr_auQxHPKJK77hUgx581wt1X-S6YqrXCN=w1000-h1250-k-no" alt="El espacio de Nuit en Nueva Córdoba" referrerpolicy="no-referrer" loading="eager"></div>
+</header>
+<main>
+ <section id="turno" class="wrap reveal">
+  <div class="turno">
+   <div>
+    <div class="fase" style="color:#8a6b5f"><i style="--f:60%;border-color:#8a6b5f"></i>Primera luna · tu turno</div>
+    <h2>Elegí qué te hacés y cuándo te queda.</h2>
+    <p class="sub">Te arma el mensaje y lo abre en el WhatsApp de Nuit. Ellas te confirman el horario (y responden rápido, según cuentan en Google).</p>
+   </div>
+   <form id="f" novalidate>
+    <label>Tratamiento</label>
+    <div class="chips" data-g="t">
+     <button type="button" class="chip" aria-pressed="false">Limpieza facial</button>
+     <button type="button" class="chip" aria-pressed="false">Depilación definitiva</button>
+     <button type="button" class="chip" aria-pressed="false">Cama solar</button>
+     <button type="button" class="chip" aria-pressed="false">Cejas y pestañas</button>
+     <button type="button" class="chip" aria-pressed="false">Masajes</button>
+     <button type="button" class="chip" aria-pressed="false">Aparatología</button>
+    </div>
+    <label>Cuándo</label>
+    <div class="chips" data-g="h">
+     <button type="button" class="chip" aria-pressed="false">Mañana (9 a 13)</button>
+     <button type="button" class="chip" aria-pressed="false">Tarde (13 a 17)</button>
+     <button type="button" class="chip" aria-pressed="false">Última hora (17 a 20)</button>
+     <button type="button" class="chip" aria-pressed="false">Sábado</button>
+    </div>
+    <label for="n">Tu nombre</label>
+    <input id="n" autocomplete="given-name" placeholder="Ej.: Coti">
+    <button class="btn" type="submit">Mandar por WhatsApp</button>
+    <p class="nota">Lunes a viernes de 9 a 20 · sábados de 9 a 14.</p>
+   </form>
+  </div>
+ </section>
+
+ <section class="wrap reveal">
+  <div class="fase"><i style="--f:30%"></i>Cuarto creciente · lo que hacen</div>
+  <h2>Lo que más se hacen en Nuit</h2>
+  <p class="sub">Sacado de lo que cuentan sus clientas en Google.</p>
+  <div class="rail">
+   <article class="trat"><h3>Limpieza facial</h3><p>Completa, con varios pasos y te van avisando cada uno. Hay versión premium.</p><small>“Terminó siendo una experiencia tipo spa” · Catalina A.</small></article>
+   <article class="trat"><h3>Depilación definitiva</h3><p>Sesiones en las que te explican todo y te hacen sentir cómoda.</p><small>“Desde la primer sesión hubo cambios súper notorios” · Constanza B.</small></article>
+   <article class="trat"><h3>Cama solar vertical</h3><p>Para llegar con color a la playa, con ventilador interno regulable.</p><small>“De las más nuevas que he visitado” · e. P.</small></article>
+   <article class="trat"><h3>Venus, HIFU y dermapen</h3><p>Aparatología corporal y facial con equipos que las clientas destacan.</p><small>“Manejan muy buena aparatología” · Georgina M.</small></article>
+   <article class="trat"><h3>Cejas, pestañas y peeling</h3><p>Perfilado de cejas, lifting de pestañas y peelings.</p><small>“Me hicieron un lifting perfecto” · Emi M.</small></article>
+   <article class="trat"><h3>Masajes y maderoterapia</h3><p>Para cuando lo que necesitás es salir relajada.</p><small>“Ya me hice masajes, depilación definitiva, HIFU y dermapen” · Eleonora D.</small></article>
+  </div>
+  <p class="desliza">Deslizá para ver más →</p>
+ </section>
+
+ <section class="wrap reveal">
+  <div class="fase"><i style="--f:10%"></i>Casi llena · lo que dicen</div>
+  <h2>291 opiniones, 4,6 de promedio</h2>
+  <p class="sub">Algunas, tal cual las escribieron.</p>
+  <div class="rail">
+   <blockquote class="op"><p>Pensé que iba a ser una limpieza más y terminó siendo una experiencia tipo spa. Me atendió Ciana, es un amor, súper delicada.</p><cite>Catalina A. · limpieza facial</cite></blockquote>
+   <blockquote class="op"><p>El lugar es hermoso! Siempre está limpio y huele súper rico. Me hice el tratamiento con la Venus y realmente 10/10!!</p><cite>Julieta C.</cite></blockquote>
+   <blockquote class="op"><p>Destaco la buena atención, lo cómoda que me hacen sentir, y lo relajada que me voy. Caro que me atiende es un amor.</p><cite>Carolina D. · depilación definitiva</cite></blockquote>
+   <blockquote class="op"><p>Fui hacerme limpieza facial, un encanto todas y aparte muy profesional Sofia quien me atendió, muy delicada y atenta.</p><cite>Rosa A.</cite></blockquote>
+   <blockquote class="op"><p>Se nota el amor al trabajo que hacen las chicas, el lugar super acogedor y hermoso. Voy a volver sin duda!</p><cite>Ruth</cite></blockquote>
+  </div>
+  <p class="desliza">Deslizá para ver más →</p>
+ </section>
+
+ <section class="wrap reveal solo-compu">
+  <div class="fase"><i style="--f:0%"></i>Luna llena · el espacio</div>
+  <h2>Un espacio elegante y acogedor</h2>
+  <div class="galeria">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TX2PyBb3381qfgwm6xszrfXsgpXGQo9_1vNQ6Uq8DjdiL4Ea2kN7VVBMA-ncSwYfS4kzB519K2J3a1lYie54ltyWGiLXaUvcrJWlpB4KzjdU63Qb4g7pNVjMdcDDaeUGPtEmQe=w800-h800-k-no" alt="Nuit por dentro" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tohjd-Y5-iM5r2OgHyc09VALDOD5VwDdFOwknD4uu61THK8lyW7jIf-wBOGsXyeADF5ZzlzoVikowzSUw-MtUojfyuj6hXFdqpqaV-xOoSBV98rpZXQvogfar3h7goyd7BrlqZ8w=w800-h800-k-no" alt="Nuit por dentro" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RQRYeZJHeRhchQRH-IBztQkvTUjc53Un-sNtL9YhUiK50iRmUEomVoTRkfUhJ-ksxkuWh2QLTDUpgc_EehVzd2laY9FMHGutlQwlRooKerY62Q5ZmF1jtVp0EO53Q2e52D3HVa=w800-h800-k-no" alt="Nuit por dentro" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QCKGrjdLZlXbhQB1I0_uW99nJPh0SXHZchRDX6Yyb1iO_A1Mz4hElnHe1r2MO_EWOcvxi0o1ZDFAp96kFNiB-FhWCv6chOu64n3IErkTiRUEY2jStDveGaI85FCkOuyT67H2zogg=w800-h800-k-no" alt="Nuit por dentro" referrerpolicy="no-referrer" loading="lazy">
+  </div>
+  <p class="flor">“Flor, la propietaria, ha creado un espacio elegante y acogedor. El grupo de trabajo es excepcional, combinan capacidad y buena onda.” — Mónica V.</p>
+ </section>
+
+ <section class="wrap reveal">
+  <div class="fase"><i style="--f:-60%"></i>Menguante · dónde estamos</div>
+  <h2>Santiago Derqui 136</h2>
+  <div class="donde">
+   <div>
+    <p class="sub">Nueva Córdoba. Se recomienda sacar turno antes.</p>
+    <ul class="horas" id="horas">
+     <li data-d="1"><span>Lunes</span><span>9 a 20</span></li>
+     <li data-d="2"><span>Martes</span><span>9 a 20</span></li>
+     <li data-d="3"><span>Miércoles</span><span>9 a 20</span></li>
+     <li data-d="4"><span>Jueves</span><span>9 a 20</span></li>
+     <li data-d="5"><span>Viernes</span><span>9 a 20</span></li>
+     <li data-d="6"><span>Sábado</span><span>9 a 14</span></li>
+     <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+    </ul>
+    <p style="margin-top:1rem"><a href="https://www.instagram.com/nuitesteticaintegral" target="_blank" rel="noopener">@nuitesteticaintegral</a></p>
+   </div>
+   <iframe title="Mapa de Nuit" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Nuit%20Est%C3%A9tica%20Integral%2C%20Santiago%20Derqui%20136%2C%20C%C3%B3rdoba&output=embed"></iframe>
+  </div>
+ </section>
+</main>
+<footer class="wrap">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</footer>
+<nav class="barra"><a class="btn" href="#turno">Pedí tu turno</a><a class="btn sec" href="tel:+543512494043">Llamar</a></nav>
+<script>
+(function(){
+ var wa='5493512494043';
+ document.querySelectorAll('.chips').forEach(function(g){
+  g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+   g.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});
+ });
+ function sel(k){var b=document.querySelector('[data-g="'+k+'"] [aria-pressed=true]');return b?b.textContent:'';}
+ document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+  var t=sel('t')||'un tratamiento',h=sel('h'),n=document.getElementById('n').value.trim();
+  var m='¡Hola Nuit! '+(n?'Soy '+n+'. ':'')+'Quería pedir turno para '+t.toLowerCase()+(h?(h==='Sábado'?', el sábado':', a '+(h.indexOf('Última')===0?'':'la ')+h.toLowerCase()):'')+'. ¿Qué disponibilidad tienen?';
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(m),'_blank');
+ });
+ var hoy=new Date().getDay();var li=document.querySelector('#horas [data-d="'+hoy+'"]');if(li)li.className='hoy';
+ document.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+ var r=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ok');io.unobserve(x.target)}})},{threshold:.12});r.forEach(function(x){io.observe(x)})}else{r.forEach(function(x){x.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>

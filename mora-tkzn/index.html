@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mora Estética · Obispo Trejo 417</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--mora:#6d1a45;--leche:#fbf3ee;--chicle:#f29bb8;--tinta:#2a1020;--suave:#f6e3e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--leche);color:var(--tinta);line-height:1.5;padding-bottom:78px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.muestra{background:var(--mora);color:var(--leche);font-size:.78rem;text-align:center;padding:.45rem 1rem;font-weight:500}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+.display{font-family:Shrikhand,cursive;font-weight:400}
+section{padding:40px 0}
+h2{font-family:Shrikhand,cursive;font-weight:400;font-size:clamp(1.9rem,7vw,3rem);line-height:1.05;color:var(--mora);margin-bottom:.5rem}
+.sub{color:#6b4a5a;max-width:50ch;margin-bottom:1.2rem}
+/* portada */
+.hero{padding-top:26px;padding-bottom:18px;display:grid;gap:22px}
+.logo{font-family:Shrikhand,cursive;font-size:2rem;color:var(--mora);line-height:1}
+.logo span{font-family:Outfit;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;display:block;margin-top:.25rem;color:#8b5a71}
+.hero h1{font-family:Shrikhand,cursive;font-weight:400;font-size:clamp(2.6rem,12vw,5.6rem);line-height:.98;color:var(--mora);margin:.4em 0 .25em}
+.hero h1 small{display:block;font-family:Outfit;font-weight:500;font-size:clamp(1.05rem,3.6vw,1.3rem);color:var(--tinta);margin-top:.7rem;line-height:1.4}
+.swatches{display:flex;gap:8px;margin:1rem 0 1.2rem}
+.sw{width:30px;height:42px;border-radius:15px 15px 8px 8px;box-shadow:inset 0 -6px 0 #0000001a;transform-origin:bottom;animation:pop .6s ease both}
+.sw:nth-child(2){animation-delay:.08s}.sw:nth-child(3){animation-delay:.16s}.sw:nth-child(4){animation-delay:.24s}.sw:nth-child(5){animation-delay:.32s}
+@keyframes pop{from{transform:scaleY(0)}to{transform:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--mora);color:var(--leche);text-decoration:none;font:700 1rem Outfit,sans-serif;padding:.95rem 1.4rem;border-radius:16px;border:0;cursor:pointer}
+.btn.sec{background:transparent;color:var(--mora);border:2px solid var(--mora)}
+.acciones{display:flex;gap:.6rem;flex-wrap:wrap}
+.nota-g{margin-top:1rem;font-size:.92rem;color:#6b4a5a}
+.nota-g b{color:var(--mora)}
+.una{position:relative;max-width:360px;justify-self:center;width:100%}
+.una .f{border-radius:180px 180px 36px 36px;overflow:hidden;aspect-ratio:3/4;background:var(--suave);border:6px solid #fff;box-shadow:0 18px 40px #6d1a4526}
+.una img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+.sello{position:absolute;right:-6px;bottom:22px;background:var(--chicle);color:var(--mora);font-family:Shrikhand;font-size:1rem;padding:.6rem .8rem;border-radius:14px;transform:rotate(-6deg);box-shadow:0 6px 16px #6d1a4522}
+/* turno: tarjeta de esmaltes */
+.carta{background:#fff;border-radius:26px;padding:22px;box-shadow:0 10px 30px #6d1a4514}
+.paso{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b5a71;margin:.4rem 0 .6rem}
+.opciones{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:1rem}
+.op{display:flex;align-items:center;gap:.6rem;text-align:left;border:2px solid var(--suave);background:var(--leche);border-radius:14px;padding:.7rem;font:500 .95rem Outfit,sans-serif;color:var(--tinta);cursor:pointer}
+.op i{width:18px;height:24px;border-radius:9px 9px 5px 5px;flex:none}
+.op[aria-pressed=true]{border-color:var(--mora);background:var(--suave)}
+.op small{display:block;color:#8b5a71;font-size:.78rem}
+.franjas{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem}
+.franjas .op{flex:1 1 auto;justify-content:center}
+.carta input{width:100%;padding:.8rem;border-radius:12px;border:2px solid var(--suave);font:1rem Outfit,sans-serif;margin-bottom:1rem;background:var(--leche)}
+.carta .btn{width:100%}
+.mini{font-size:.8rem;color:#8b5a71;margin-top:.6rem}
+/* opiniones */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px}
+.rail::-webkit-scrollbar{height:4px}.rail::-webkit-scrollbar-thumb{background:var(--chicle);border-radius:4px}
+.rv{scroll-snap-align:start;flex:0 0 84%;max-width:360px;background:#fff;border-radius:22px;padding:20px;border-top:8px solid var(--c,#f29bb8)}
+.rv p{margin-bottom:.8rem}
+.rv cite{font-style:normal;font-weight:700;color:var(--mora);font-size:.9rem}
+.desliza{font-size:.82rem;color:#8b5a71}
+/* chicas */
+.chicas{display:grid;gap:14px}
+.chica{background:var(--mora);color:var(--leche);border-radius:24px;padding:22px;position:relative;overflow:hidden}
+.chica h3{font-family:Shrikhand;font-weight:400;font-size:2rem;color:var(--chicle)}
+.chica p{opacity:.92}
+.chica .q{margin-top:.8rem;font-size:.9rem;opacity:.85}
+.chica:after{content:"";position:absolute;right:-20px;top:-20px;width:90px;height:120px;border-radius:45px 45px 20px 20px;background:#ffffff14}
+/* así se vive */
+.vive{list-style:none;display:grid;gap:10px}
+.vive li{background:var(--suave);border-radius:18px;padding:16px 18px}
+.vive b{display:block;color:var(--mora);font-size:1.05rem}
+.vive span{font-size:.88rem;color:#6b4a5a}
+.fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.fotos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:60px 60px 16px 16px}
+.donde{display:grid;gap:16px}
+.horas{background:#fff;border-radius:20px;padding:16px 20px}
+.horas p{display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px dashed var(--suave)}
+iframe{width:100%;height:260px;border:0;border-radius:22px}
+footer{padding:24px 0 36px;text-align:center;font-size:.82rem;color:#8b5a71}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;padding:10px 12px;background:#fbf3eeee;backdrop-filter:blur(6px);border-top:1px solid var(--suave)}
+.barra .btn{flex:1;padding:.85rem}
+.solo-compu{display:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.ok{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.sw{animation:none}html{scroll-behavior:auto}}
+@media (min-width:900px){
+ body{padding-bottom:0}.barra{display:none}.solo-compu{display:block}
+ .hero{grid-template-columns:1.2fr .8fr;align-items:center;padding-top:56px;padding-bottom:30px}
+ .carta{padding:36px;display:grid;grid-template-columns:.8fr 1.2fr;gap:36px}
+ .opciones{grid-template-columns:repeat(3,1fr)}
+ .rv{flex:0 0 32%}
+ .chicas{grid-template-columns:1fr 1fr}
+ .vive{grid-template-columns:repeat(4,1fr)}
+ .donde{grid-template-columns:1fr 1.4fr}
+ iframe{height:340px}
+ .desliza{display:none}
+}
+</style>
+</head>
+<body>
+<div class="muestra">Muestra preparada por newaves para Mora Estética · No está publicada</div>
+<header class="wrap hero">
+ <div>
+  <div class="logo">mora<span>estética · Obispo Trejo 417</span></div>
+  <h1>Uñas sanas, cejas a tu gusto.<small>Y una charla como con una amiga de toda la vida. Uñas con Vale, cejas y pestañas con Belu, depi definitiva y bronceado, en el centro de Córdoba.</small></h1>
+  <div class="swatches" aria-hidden="true"><i class="sw" style="background:#6d1a45"></i><i class="sw" style="background:#f29bb8"></i><i class="sw" style="background:#c9475f"></i><i class="sw" style="background:#f4d6c6"></i><i class="sw" style="background:#2a1020"></i></div>
+  <div class="acciones"><a class="btn" href="#turno">Sacá tu turno</a><a class="btn sec" href="tel:+543516822112">351 682-2112</a></div>
+  <p class="nota-g"><b>4,8 en Google</b> con 133 opiniones · de lunes a sábado de 9 a 21</p>
+ </div>
+ <div class="una"><div class="f"><img src="https://gz0.googleusercontent.com/grass-cs/AABkmLcEPzCRMgvXZ0BG12jRkEB-ycDjZIJ5xTqdfenvKMlkiqBk8fuPd2yvZZEY8SIej1q7AbQEkKiutDSPrDv-nA6HHLqzP5jVrx0MGNMjAGEcmcEBHpdPLkCYmKbZmDVgW9ffODxaSAP-_S9g=w900-h1200-k-no" alt="Mora Estética" referrerpolicy="no-referrer"></div><div class="sello">Luzu de fondo</div></div>
+</header>
+<main>
+ <section id="turno" class="wrap reveal">
+  <div class="carta">
+   <div>
+    <h2>Elegí tu color… digo, tu turno</h2>
+    <p class="sub">Tocá lo que te querés hacer y cuándo te queda. Se arma el mensaje y te abre el WhatsApp de Mora para que te confirmen.</p>
+   </div>
+   <form id="f" novalidate>
+    <div class="paso">1 · Qué te hacés</div>
+    <div class="opciones" data-g="s">
+     <button type="button" class="op" aria-pressed="false"><i style="background:#6d1a45"></i><span>Uñas<small>con Vale</small></span></button>
+     <button type="button" class="op" aria-pressed="false"><i style="background:#c9475f"></i><span>Cejas<small>perfilado o laminado</small></span></button>
+     <button type="button" class="op" aria-pressed="false"><i style="background:#f29bb8"></i><span>Pestañas<small>lifting</small></span></button>
+     <button type="button" class="op" aria-pressed="false"><i style="background:#f4d6c6"></i><span>Depi definitiva</span></button>
+     <button type="button" class="op" aria-pressed="false"><i style="background:#b9785a"></i><span>Bronceado</span></button>
+     <button type="button" class="op" aria-pressed="false"><i style="background:#2a1020"></i><span>Combo<small>te asesoran</small></span></button>
+    </div>
+    <div class="paso">2 · Cuándo</div>
+    <div class="franjas" data-g="h">
+     <button type="button" class="op" aria-pressed="false">Mañana</button>
+     <button type="button" class="op" aria-pressed="false">Siesta</button>
+     <button type="button" class="op" aria-pressed="false">Tarde</button>
+     <button type="button" class="op" aria-pressed="false">Después de las 19</button>
+    </div>
+    <input id="n" placeholder="Tu nombre" autocomplete="given-name">
+    <button class="btn" type="submit">Pedirlo por WhatsApp</button>
+    <p class="mini">¿Te surge algo? Cuentan que cambiar el turno días antes nunca es drama.</p>
+   </form>
+  </div>
+ </section>
+
+ <section class="wrap reveal">
+  <h2>“Caí con Vale y nunca más la solté”</h2>
+  <p class="sub">Así hablan de Mora en Google. Copiamos algunas tal cual.</p>
+  <div class="rail">
+   <blockquote class="rv" style="--c:#6d1a45"><p>Desde Octubre 2022 que me hago las uñas con Vale, cada 3 semanas. Hace 4 años que mis uñas naturales están fuertes y sanas.</p><cite>Karen I.</cite></blockquote>
+   <blockquote class="rv" style="--c:#f29bb8"><p>Las uñas siempre me las dejan impecable. Vale es una genia!! Y encima te ponen luzu de fondo 10/10</p><cite>Valentina M.</cite></blockquote>
+   <blockquote class="rv" style="--c:#c9475f"><p>Belu me preguntó qué me gustaba especialmente por la forma de las cejas y nunca me hizo nada que no quisiera!! Para mí es re valioso eso.</p><cite>Dana D.</cite></blockquote>
+   <blockquote class="rv" style="--c:#f4d6c6"><p>Hace más de 3 años que me atiendo en Mora. Soy de zona norte y vale 100% la pena ir hasta el centro.</p><cite>Agustina C.</cite></blockquote>
+   <blockquote class="rv" style="--c:#b9785a"><p>Me hice laminado de cejas y lifting de pestañas. Me quedaron HERMOSAS. Me arrepiento de no haberlo hecho antes.</p><cite>Emilia Q.</cite></blockquote>
+   <blockquote class="rv" style="--c:#2a1020"><p>Desde que llegás te sentís cómoda como si estuvieras con una amiga de toda la vida.</p><cite>Martina J.</cite></blockquote>
+  </div>
+  <p class="desliza">Deslizá para ver más →</p>
+ </section>
+
+ <section class="wrap reveal">
+  <h2>Las chicas</h2>
+  <div class="chicas">
+   <article class="chica"><h3>Vale</h3><p>Manicura. Prolija, detallista y rápida: hay clientas que van con ella cada tres semanas desde hace años.</p><p class="q">“Entendió a la perfección lo que quería e incluso me hizo recomendaciones que me encantaron.” — Juliana L., uñas para su egreso</p></article>
+   <article class="chica" style="background:#c9475f"><h3 style="color:#fbf3ee">Belu</h3><p>Cejas y pestañas. Perfilado, laminado y lifting, siempre preguntando primero qué te gusta.</p><p class="q">“Amé lo perfeccionista y detallista que es Belu.” — Martina J.</p></article>
+  </div>
+ </section>
+
+ <section class="wrap reveal solo-compu">
+  <h2>Así se vive Mora</h2>
+  <ul class="vive">
+   <li><b>Algo para tomar</b><span>Te lo ofrecen apenas llegás.</span></li>
+   <li><b>Luzu de fondo</b><span>Y charla, nada de estar tiesa.</span></li>
+   <li><b>Turnos flexibles</b><span>Si tenés que cambiarlo, se cambia.</span></li>
+   <li><b>Clientas de años</b><span>“Soy clienta de Mora desde hace años, tanto para uñas como para cejas y depilación.” — Sheila M.</span></li>
+  </ul>
+  <div class="fotos" style="margin-top:18px">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SlifYLvnufuPcLjRjENfMgACe8LveokzXzBMNRo45RxKoclT4_ZOphzCIYNhtS2yaY9wcEsZJL6DRiRIvI1GKixocs04G8QAQPZ3if-akBf545UYFXeEFv7jdDDCTtuqQuvgSo=w800-h800-k-no" alt="Trabajo de Mora" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SLMNBN7FDQ-esOGPLvL9tVcl6yNObdyaYb1PgzEvzJMYZq1DB-0xj1mYrHu7TLAWXcgeWzHJYt5DWKieIFLDIsBePxS7FyG2Va_zeK_r3V6qZJFRF7-leRzWEshhKnNX_v3fcV=w800-h800-k-no" alt="Trabajo de Mora" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RmzRHEst1KP05AHZUNSkfu4nXkjHx66tE-XWa290vxMvu0u-5jC3lhazyDwHHAN80GiBKV5Co2YGNTy3mf_hIIXoyHiIhv8my_RSanRftcGcSWMIYjzetKpbRp511t1lbyRzdCl9MYYshl=w800-h800-k-no" alt="Trabajo de Mora" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R-iXIp8WTdxhN9V6O9AOKkjFTffBJOlgXdTLMIG7CVcDfM5AFjXgDlqwwyKzqlsTUIzGQoZZQYyK4dYv1gaW4h4s-hD0DEOhYV6HsxfPrL-xIvptxuB9X3o_05Ldoa_ETwQUL9=w800-h800-k-no" alt="Trabajo de Mora" referrerpolicy="no-referrer" loading="lazy">
+  </div>
+ </section>
+
+ <section class="wrap reveal">
+  <h2>Pasá por Obispo Trejo 417</h2>
+  <div class="donde">
+   <div class="horas">
+    <p><span>Lunes a sábado</span><b>9 a 21</b></p>
+    <p><span>Domingo</span><b>Cerrado</b></p>
+    <p style="border:0"><a href="https://www.instagram.com/moraestetica_cba" target="_blank" rel="noopener">@moraestetica_cba</a><a href="https://wa.me/5493516822112">WhatsApp</a></p>
+   </div>
+   <iframe title="Mapa de Mora Estética" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Mora%20Est%C3%A9tica%2C%20Obispo%20Trejo%20417%2C%20C%C3%B3rdoba&output=embed"></iframe>
+  </div>
+ </section>
+</main>
+<footer class="wrap">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</footer>
+<nav class="barra"><a class="btn" href="#turno">Sacá tu turno</a><a class="btn sec" href="tel:+543516822112">Llamar</a></nav>
+<script>
+(function(){
+ var wa='5493516822112';
+ document.querySelectorAll('[data-g]').forEach(function(g){
+  g.addEventListener('click',function(e){var b=e.target.closest('.op');if(!b)return;
+   g.querySelectorAll('.op').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});
+ });
+ function sel(k){var b=document.querySelector('[data-g="'+k+'"] [aria-pressed=true]');if(!b)return '';var s=b.querySelector('span');return (s?s.firstChild.textContent:b.textContent).trim();}
+ document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+  var s=sel('s'),h=sel('h'),n=document.getElementById('n').value.trim();
+  var m='¡Hola Mora! '+(n?'Soy '+n+'. ':'')+'Quería sacar turno'+(s?' para '+s.toLowerCase():'')+(h?', a la '+h.toLowerCase():'')+'. ¿Qué tienen disponible?';
+  m=m.replace('a la después','después');
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(m),'_blank');
+ });
+ document.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+ var r=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ok');io.unobserve(x.target)}})},{threshold:.12});r.forEach(function(x){io.observe(x)})}else{r.forEach(function(x){x.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>

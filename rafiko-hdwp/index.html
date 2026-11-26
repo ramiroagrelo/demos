@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Rafiko Pet House · Nueva Córdoba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--taxi:#f6c445;--pet:#13403f;--hueso:#fbf7ee;--tinta:#10211f;--linea:#13403f26}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;background:var(--hueso);color:var(--tinta);line-height:1.5;padding-bottom:78px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.muestra{background:var(--tinta);color:var(--taxi);font-size:.78rem;text-align:center;padding:.45rem 1rem;font-weight:700}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+h1,h2,h3,.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.02em}
+section{padding:42px 0}
+h2{font-size:clamp(1.9rem,7vw,3.1rem);line-height:1.02;margin-bottom:.5rem}
+.sub{color:#3d5553;max-width:52ch;margin-bottom:1.2rem}
+/* portada */
+.hero{background:var(--pet);color:var(--hueso);padding:22px 0 0;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;color:var(--taxi)}
+.logo small{font-family:"Atkinson Hyperlegible";font-weight:400;font-size:.75rem;color:#cfe0dc;display:block;letter-spacing:.08em}
+.abierto{font-size:.8rem;background:#ffffff1a;padding:.35rem .7rem;border-radius:999px}
+.hero-g{display:grid;gap:20px;padding:26px 0 0}
+.hero h1{font-size:clamp(2.6rem,12.5vw,6rem);line-height:.94;margin-bottom:.4em}
+.hero h1 span{color:var(--taxi)}
+.hero p{color:#d8e6e3;max-width:40ch;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--taxi);color:var(--tinta);text-decoration:none;font:700 1rem "Atkinson Hyperlegible",sans-serif;padding:.95rem 1.3rem;border-radius:12px;border:0;cursor:pointer}
+.btn.sec{background:transparent;border:2px solid currentColor;color:inherit}
+.acciones{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.2rem 0 1.4rem}
+.cifras{display:flex;gap:1.4rem;font-size:.88rem;color:#cfe0dc;margin-bottom:1.6rem}
+.cifras b{display:block;font-family:"Bricolage Grotesque";font-size:1.7rem;color:var(--hueso)}
+.foto{position:relative;border-radius:22px 22px 0 0;overflow:hidden;aspect-ratio:4/3;background:#0d2e2d}
+.foto img{width:100%;height:100%;object-fit:cover}
+/* ruta protagonista */
+.ruta{position:relative;height:46px;margin:0 0 -1px;background:var(--hueso)}
+.ruta:before{content:"";position:absolute;left:0;right:0;top:22px;border-top:3px dashed var(--pet);opacity:.35}
+.taxi{position:absolute;top:8px;left:0;width:54px;height:28px;background:var(--taxi);border-radius:8px 14px 6px 6px;box-shadow:inset 0 -5px 0 #0000001f;animation:viaje 9s linear infinite}
+.taxi:before,.taxi:after{content:"";position:absolute;bottom:-7px;width:13px;height:13px;border-radius:50%;background:var(--tinta)}
+.taxi:before{left:7px}.taxi:after{right:7px}
+.taxi i{position:absolute;left:13px;top:-7px;width:20px;height:8px;background:var(--tinta);border-radius:3px 3px 0 0}
+@keyframes viaje{from{transform:translateX(-60px)}to{transform:translateX(calc(100vw + 10px))}}
+/* turno */
+.turno{display:grid;gap:18px}
+.campo{margin-bottom:1rem}
+.campo > b{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#3d5553;margin-bottom:.45rem}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{flex:1 1 auto;border:2px solid var(--linea);background:#fff;border-radius:12px;padding:.7rem .8rem;font:700 .95rem "Atkinson Hyperlegible",sans-serif;color:var(--tinta);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--pet);border-color:var(--pet);color:var(--taxi)}
+.turno input{width:100%;padding:.8rem;border:2px solid var(--linea);border-radius:12px;font:1rem "Atkinson Hyperlegible",sans-serif;margin-bottom:1rem}
+.turno .btn{width:100%;background:var(--pet);color:var(--taxi)}
+.ticket{background:#fff;border-radius:20px;padding:22px;border:2px solid var(--linea)}
+.chico{font-size:.82rem;color:#3d5553;margin-top:.6rem}
+/* traslado */
+.paradas{list-style:none;counter-reset:p;display:grid;gap:12px}
+.paradas li{background:var(--taxi);border-radius:18px;padding:18px 18px 18px 64px;position:relative;counter-increment:p}
+.paradas li:before{content:counter(p);position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--tinta);color:var(--taxi);font:800 1.1rem "Bricolage Grotesque";display:grid;place-items:center}
+.paradas b{display:block;font-size:1.05rem}
+.cita{margin-top:14px;font-size:.95rem;color:#3d5553;border-left:4px solid var(--taxi);padding-left:12px}
+/* opiniones */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.rail::-webkit-scrollbar{height:4px}.rail::-webkit-scrollbar-thumb{background:var(--pet);border-radius:4px}
+.rv{scroll-snap-align:start;flex:0 0 84%;max-width:360px;background:#fff;border-radius:20px;padding:20px;border:2px solid var(--linea)}
+.rv p{margin-bottom:.8rem}
+.rv cite{font-style:normal;font-weight:700;color:var(--pet)}
+.rv .r{font-size:.85rem;color:#3d5553;border-top:1px dashed var(--linea);padding-top:.6rem;margin-top:.6rem}
+.desliza{font-size:.82rem;color:#3d5553}
+/* pet shop */
+.shop{background:var(--pet);color:var(--hueso);border-radius:26px;padding:24px}
+.shop h2{color:var(--taxi)}
+.shop .sub{color:#cfe0dc}
+.shop ul{list-style:none;display:grid;gap:8px;margin-bottom:1.2rem}
+.shop li{background:#ffffff12;border-radius:12px;padding:.7rem .9rem}
+.vete{display:grid;gap:14px}
+.vete .card{background:#fff;border-radius:20px;padding:20px;border:2px solid var(--linea)}
+.vete h3{font-size:1.4rem;margin-bottom:.3rem}
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.galeria img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px}
+.donde{display:grid;gap:16px}
+.horas{background:#fff;border-radius:20px;padding:18px;border:2px solid var(--linea)}
+.horas p{display:flex;justify-content:space-between;padding:.35rem 0}
+iframe{width:100%;height:270px;border:0;border-radius:20px}
+footer{padding:26px 0 36px;text-align:center;font-size:.82rem;color:#3d5553}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;padding:10px 12px;background:#10211fee;border-top:1px solid #ffffff1a}
+.barra .btn{flex:1;padding:.85rem}.barra .sec{color:var(--hueso)}
+.solo-compu{display:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.ok{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.taxi{animation:none;left:20px}html{scroll-behavior:auto}}
+@media (min-width:900px){
+ body{padding-bottom:0}.barra{display:none}.solo-compu{display:block}
+ .hero-g{grid-template-columns:1.1fr .9fr;align-items:end;padding-top:40px}
+ .foto{border-radius:22px 22px 0 0;aspect-ratio:1/1}
+ .hero h1{font-size:4.6rem}
+ .turno{grid-template-columns:.8fr 1.2fr;align-items:start}
+ .paradas{grid-template-columns:repeat(3,1fr)}
+ .rv{flex:0 0 32%}
+ .shop{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:40px}
+ .vete{grid-template-columns:repeat(3,1fr)}
+ .donde{grid-template-columns:1fr 1.4fr}
+ iframe{height:340px}.desliza{display:none}
+}
+</style>
+</head>
+<body>
+<div class="muestra">Muestra preparada por newaves para Rafiko Pet House · No está publicada</div>
+<header class="hero">
+ <div class="wrap">
+  <div class="top"><div class="logo">Rafiko<small>Pet House · Nueva Córdoba</small></div><span class="abierto" id="abierto">L a S · 9 a 21</span></div>
+  <div class="hero-g">
+   <div>
+    <h1>Lo buscamos, lo bañamos <span>y te lo devolvemos.</span></h1>
+    <p>Peluquería canina con traslado, veterinaria y pet shop con envío en el día. En Ituzaingó 1005, Nueva Córdoba. Y si no podés venir, te lo pasamos a buscar.</p>
+    <div class="acciones"><a class="btn" href="#turno">Pedí turno</a><a class="btn sec" href="#alimento">Pedí alimento</a></div>
+    <div class="cifras"><div><b>4,8</b>en Google</div><div><b>153</b>opiniones</div><div><b>Todas</b>respondidas</div></div>
+   </div>
+   <div class="foto"><img src="https://gz0.googleusercontent.com/grass-cs/AABkmLeQjILXm5XaknHoDiHGE7ij8et-Fw2YOE4u8v-s7KOAdAzzFH0ddDXCKTctUKCEFW9Y7x-7Dvyr3LtPJTF0be7q9P61Uww8bFui7UiVkxrShQCowNMptROAheZYMR-SZuFK9XoG94B4KlX4=w1100-h1100-k-no" alt="Rafiko Pet House" referrerpolicy="no-referrer"></div>
+  </div>
+ </div>
+</header>
+<div class="ruta" aria-hidden="true"><span class="taxi"><i></i></span></div>
+<main>
+ <section id="turno" class="wrap reveal">
+  <div class="turno">
+   <div>
+    <h2>Turno para la pelu o la vete</h2>
+    <p class="sub">Elegís, se arma el mensaje y te abre el WhatsApp de Rafiko. Ellos te confirman día y hora (y el precio).</p>
+    <p class="cita">“Muy puntuales para atender y cumplieron al 100% con el tiempo aproximado que nos habían comunicado. Salió como una reina.” — Karina S.</p>
+   </div>
+   <form class="ticket" id="f" novalidate>
+    <div class="campo"><b>Para</b><div class="seg" data-g="s"><button type="button" aria-pressed="false">Baño y corte</button><button type="button" aria-pressed="false">Baño y uñas</button><button type="button" aria-pressed="false">Consulta veterinaria</button></div></div>
+    <div class="campo"><b>Tu mascota</b><div class="seg" data-g="m"><button type="button" aria-pressed="false">Perro chico</button><button type="button" aria-pressed="false">Perro mediano</button><button type="button" aria-pressed="false">Perro grande</button><button type="button" aria-pressed="false">Gato</button></div></div>
+    <div class="campo"><b>¿Lo buscamos?</b><div class="seg" data-g="t"><button type="button" aria-pressed="false">Sí, con traslado</button><button type="button" aria-pressed="false">No, lo llevo yo</button></div></div>
+    <div class="campo"><b>Cuándo</b><div class="seg" data-g="h"><button type="button" aria-pressed="false">Mañana</button><button type="button" aria-pressed="false">Tarde</button><button type="button" aria-pressed="false">Noche (hasta 21)</button></div></div>
+    <input id="n" placeholder="Nombre de tu mascota" autocomplete="off">
+    <button class="btn" type="submit">Mandar por WhatsApp</button>
+    <p class="chico">Lunes a sábado de 9 a 21.</p>
+   </form>
+  </div>
+ </section>
+
+ <section class="wrap reveal">
+  <h2>Así funciona el traslado</h2>
+  <p class="sub">Lo que más sorprende en sus reseñas: no hace falta que te muevas.</p>
+  <ol class="paradas">
+   <li><b>Lo pasamos a buscar</b>Coordinás por WhatsApp y vamos a tu casa.</li>
+   <li><b>Baño, corte y mimos</b>Con el cuidado que pida: grande, viejito o con la cadera delicada.</li>
+   <li><b>Vuelve a casa</b>Impecable, y a veces con un regalito.</li>
+  </ol>
+  <p class="cita">“No conseguíamos dónde bañar un Akita (muchos los evitan por el tamaño y pelaje), encima está viejito. Acá no solo lo dejaron impecable sino que lo buscaron en taxi y hasta lo devolvieron con un regalito incluido!” — Nicolás C.</p>
+ </section>
+
+ <section class="wrap reveal">
+  <h2>Lo que dicen (y lo que contestan)</h2>
+  <p class="sub">Rafiko responde cada reseña. Algunas, tal cual.</p>
+  <div class="rail">
+   <blockquote class="rv"><p>Llevé a mi perro por un problema de piel y me atendieron súper rápido. Me explicaron qué le pasaba y me pasaron el presupuesto en el momento. Los análisis se los hicieron también ahí mismo.</p><cite>Julián B.</cite></blockquote>
+   <blockquote class="rv"><p>Destaco el trabajo de la Dra. Bárbara Herrera por su profesionalismo y calidez; en los momentos necesarios no dudó en derivar a especialistas.</p><cite>Agustina M.</cite></blockquote>
+   <blockquote class="rv"><p>Pedí todo por WhatsApp y me llegó el pedido el mismo día.</p><cite>Luis C.</cite><p class="r">Rafiko: “Que el pedido hecho por WhatsApp te llegue el mismo día es justo lo que buscamos 🐾”</p></blockquote>
+   <blockquote class="rv"><p>Hace años que encargo el alimento para mi manada perruna y siempre han sido muy puntuales.</p><cite>Leticia O.</cite><p class="r">Rafiko: “Leticia, qué lindo eso de «mi manada perruna».”</p></blockquote>
+   <blockquote class="rv"><p>Excelente atención, buen precio y promos bancarias. PD: si les pedís, te envían stickers de michis!</p><cite>Juan I.</cite></blockquote>
+  </div>
+  <p class="desliza">Deslizá para ver más →</p>
+ </section>
+
+ <section id="alimento" class="wrap reveal">
+  <div class="shop">
+   <div>
+    <h2>El alimento, en tu casa hoy</h2>
+    <p class="sub">Escribís qué necesitás y te lo mandan en el día. Según el monto, el envío no tiene costo extra.</p>
+    <ul>
+     <li>Alimento para perros y gatos, con marcas difíciles de conseguir (como Wild Atlantic Blend para gatos).</li>
+     <li>Pagás como te quede: hay promos bancarias y se puede en efectivo.</li>
+    </ul>
+   </div>
+   <form id="f2" novalidate>
+    <div class="campo"><b style="color:#cfe0dc">Es para</b><div class="seg" data-g="a"><button type="button" aria-pressed="false">Perro</button><button type="button" aria-pressed="false">Gato</button><button type="button" aria-pressed="false">Los dos</button></div></div>
+    <input id="q" placeholder="Qué alimento y cuántos kilos" style="width:100%;padding:.8rem;border-radius:12px;border:0;font:1rem 'Atkinson Hyperlegible',sans-serif;margin-bottom:1rem">
+    <input id="b" placeholder="Tu barrio" style="width:100%;padding:.8rem;border-radius:12px;border:0;font:1rem 'Atkinson Hyperlegible',sans-serif;margin-bottom:1rem">
+    <button class="btn" type="submit" style="width:100%">Pedir por WhatsApp</button>
+   </form>
+  </div>
+ </section>
+
+ <section class="wrap reveal solo-compu">
+  <h2>Una casa para mascotas</h2>
+  <div class="vete">
+   <div class="card"><h3>Veterinaria</h3><p>Consultas, análisis en el lugar y presupuesto en el momento.</p></div>
+   <div class="card"><h3>Peluquería canina</h3><p>Baño, corte y uñas, con turnos que se cumplen.</p></div>
+   <div class="card"><h3>Pet shop</h3><p>En el local o por WhatsApp, con envío en el día.</p></div>
+  </div>
+  <div class="galeria">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TWIjuDcIinwdtDeq9YBksvZDosBBCoYayuiZTKR9Ulunlhlnh0wVVs7k136aIShctPZ3zMKLZeLG4d3XaNJ-or2ZqVqbWXq21apxmWoQ90THl8FudqRWuUVwBjGDW-k_lhmGOJ2jQutPc=w800-h800-k-no" alt="Rafiko Pet House" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SSaLy0vQknozw36bhj_1TL-ffGHNnymAZG1QeJrIkIzlrPLfRhcLxi2zhy5PkYgAXGICvTyUQWViXkGEBJrZx5nK-hVyAU3Y5D206hgKFDEbWe8fOWT0GZDJRIoUqygy4PDPD1zRPmq5-H=w800-h800-k-no" alt="Rafiko Pet House" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RvVD6PY0EIMU0HvwUip8w3A7M5tLgVNod8pDXdiSP-l529wxlhdUAdyoMOxqIkzVkY9wv-H59gxD6pUugCb8ym0R97O-KqWuJHROju0cAP55OtOM6dfGd7nu_BtP-2wETbajgLoqie9NlV=w800-h800-k-no" alt="Rafiko Pet House" referrerpolicy="no-referrer" loading="lazy">
+   <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TVXjFeCz2g9HxRNy8BY09Snjx3EnORKdfx9qsKXbACqnwEqbw8s1fYrO-vy6vV4UnFe4TOd_OX1cMZRydCndgNOCKsr4vnJmo4xAzGNh-7fZ_Kat8L0jVF6531nhh0Uzv6Ea6411VupVbb=w800-h800-k-no" alt="Rafiko Pet House" referrerpolicy="no-referrer" loading="lazy">
+  </div>
+ </section>
+
+ <section class="wrap reveal">
+  <h2>Ituzaingó 1005</h2>
+  <div class="donde">
+   <div class="horas">
+    <p><span>Lunes a sábado</span><b>9 a 21</b></p>
+    <p><span>Domingo</span><b>Cerrado</b></p>
+    <p><a href="https://www.instagram.com/rafiko.pethouse" target="_blank" rel="noopener">@rafiko.pethouse</a><a href="tel:+543515294875">351 529-4875</a></p>
+   </div>
+   <iframe title="Mapa de Rafiko" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rafiko%20Pet%20House%2C%20Ituzaing%C3%B3%201005%2C%20C%C3%B3rdoba&output=embed"></iframe>
+  </div>
+ </section>
+</main>
+<footer class="wrap">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</footer>
+<nav class="barra"><a class="btn" href="#turno">Pedí turno</a><a class="btn sec" href="tel:+543515294875">Llamar</a></nav>
+<script>
+(function(){
+ var wa='5493515294875';
+ document.querySelectorAll('[data-g]').forEach(function(g){
+  g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+   g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});
+ });
+ function sel(k){var b=document.querySelector('[data-g="'+k+'"] [aria-pressed=true]');return b?b.textContent.trim():'';}
+ function abrir(m){window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(m),'_blank');}
+ document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+  var s=sel('s'),m=sel('m'),t=sel('t'),h=sel('h'),n=document.getElementById('n').value.trim();
+  var x='¡Hola Rafiko! Quería un turno'+(s?' de '+s.toLowerCase():'')+(m?' para '+(n?n+', ':'')+'mi '+m.toLowerCase():(n?' para '+n:''))+'.';
+  if(t)x+=t.indexOf('Sí')===0?' ¿Lo pueden pasar a buscar?':' Lo llevo yo.';
+  if(h)x+=' Me queda mejor a la '+h.toLowerCase().replace(' (hasta 21)','')+'.';
+  abrir(x);
+ });
+ document.getElementById('f2').addEventListener('submit',function(e){e.preventDefault();
+  var a=sel('a'),q=document.getElementById('q').value.trim(),b=document.getElementById('b').value.trim();
+  abrir('¡Hola Rafiko! Quería pedir alimento'+(a?' para '+(a==='Los dos'?'perro y gato':a.toLowerCase()):'')+(q?': '+q:'')+'.'+(b?' Estoy en '+b+'.':'')+' ¿Me lo pueden mandar hoy?');
+ });
+ var d=new Date(),h=d.getHours(),el=document.getElementById('abierto');
+ if(d.getDay()!==0&&h>=9&&h<21)el.textContent='Abierto ahora · hasta las 21';
+ document.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+ var r=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ok');io.unobserve(x.target)}})},{threshold:.12});r.forEach(function(x){io.observe(x)})}else{r.forEach(function(x){x.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>
