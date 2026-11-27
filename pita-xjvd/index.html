@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Clínica Veterinaria PITA · Oftalmología · Bv. Chacabuco 651</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cobalto:#2340c8;--cobalto2:#1a2f96;--menta:#c6ecdb;--blanco:#f8f9f6;--tinta:#0f1630;--gris:#5c6478;--linea:#0f163014}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--blanco);color:var(--tinta);line-height:1.55;padding-bottom:80px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.muestra{background:var(--tinta);color:var(--blanco);font-size:.78rem;text-align:center;padding:.45rem 1rem;font-weight:500}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+.main{display:flex;flex-direction:column}
+.main>section{min-width:0;width:100%}
+.fila{min-width:0;max-width:100%}
+section{padding:42px 0}
+h2{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(1.8rem,7vw,2.9rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:.5rem}
+h2 span{color:var(--cobalto)}
+.sub{color:var(--gris);max-width:52ch;margin-bottom:1.3rem}
+.kicker{font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cobalto)}
+/* portada con optotipo */
+.hero{padding-top:24px;padding-bottom:16px;display:grid;gap:26px}
+.marca{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.9rem}
+.marca b{font-family:'Archivo Black';font-weight:400;font-size:1.5rem;letter-spacing:.08em}
+.marca i{font-style:normal;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;background:var(--menta);padding:.25rem .5rem;border-radius:6px}
+.hero h1{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(2.3rem,10vw,4.6rem);line-height:1.02;letter-spacing:-.02em;margin:.4em 0 .3em}
+.hero h1 span{color:var(--cobalto)}
+.hero .l{font-size:1.07rem;max-width:46ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--cobalto);color:#fff;text-decoration:none;font:700 1rem 'Public Sans',sans-serif;padding:.95rem 1.4rem;border-radius:12px;border:0;cursor:pointer}
+.btn.sec{background:transparent;color:var(--cobalto);border:2px solid var(--cobalto)}
+.acciones{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.nota{margin-top:1rem;font-size:.92rem;color:var(--gris)}
+.nota b{color:var(--tinta)}
+.tabla{background:#fff;border:2px solid var(--tinta);border-radius:18px;padding:22px 18px 16px;text-align:center;max-width:360px;width:100%;justify-self:center;box-shadow:10px 10px 0 var(--menta)}
+.tabla .r{font-family:'Archivo Black';letter-spacing:.35em;line-height:1.15;margin-left:.35em}
+.tabla .r1{font-size:4.4rem}.tabla .r2{font-size:2.6rem}.tabla .r3{font-size:1.6rem}.tabla .r4{font-size:1.05rem;color:var(--cobalto)}.tabla .r5{font-size:.7rem;color:var(--gris)}
+.tabla .pie{display:flex;justify-content:space-between;border-top:1px solid var(--linea);margin-top:12px;padding-top:10px;font-size:.78rem;color:var(--gris)}
+@media (prefers-reduced-motion:no-preference){.tabla .r{animation:foco 1.6s ease both}.tabla .r2{animation-delay:.15s}.tabla .r3{animation-delay:.3s}.tabla .r4{animation-delay:.45s}.tabla .r5{animation-delay:.6s}}
+@keyframes foco{from{filter:blur(6px);opacity:.2}to{filter:none;opacity:1}}
+/* turno */
+.turno{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:22px}
+.paso{font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin:.4rem 0 .6rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.chip{border:2px solid var(--linea);background:var(--blanco);border-radius:10px;padding:.55rem .9rem;font:500 .95rem 'Public Sans',sans-serif;color:var(--tinta);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--cobalto);border-color:var(--cobalto);color:#fff}
+label.n{display:block;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin:.4rem 0 .4rem}
+input{width:100%;font:1rem 'Public Sans',sans-serif;padding:.8rem 1rem;border-radius:10px;border:2px solid var(--linea);background:var(--blanco);margin-bottom:1rem;color:var(--tinta)}
+.turno .btn{width:100%}
+.aviso{font-size:.85rem;color:var(--gris);margin-top:.7rem}
+/* casos de ojos */
+.casos{display:grid;gap:12px}
+.caso{background:var(--menta);border-radius:18px;padding:20px;position:relative}
+.caso .ojo{width:44px;height:26px;border:3px solid var(--tinta);border-radius:50%/50%;display:grid;place-items:center;margin-bottom:.8rem}
+.caso .ojo:after{content:"";width:12px;height:12px;border-radius:50%;background:var(--cobalto)}
+.caso h3{font-family:'Archivo Black';font-weight:400;font-size:1.2rem;margin-bottom:.3rem}
+.caso p{font-size:.96rem}
+.caso cite{display:block;margin-top:.5rem;font-style:normal;font-weight:700;font-size:.85rem;color:var(--cobalto2)}
+/* carruseles */
+.fila{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.desliza{font-size:.85rem;color:var(--gris);margin-top:.3rem}
+.op{scroll-snap-align:start;flex:0 0 86%;max-width:380px;background:#fff;border:1px solid var(--linea);border-radius:18px;padding:22px}
+.op .est{color:var(--cobalto);letter-spacing:.12em;margin-bottom:.5rem}
+.op p{font-size:1.02rem;margin-bottom:.9rem}
+.op cite{font-style:normal;font-weight:700;font-size:.88rem}
+/* equipo */
+.equipo{display:grid;gap:14px}
+.persona{border-top:3px solid var(--tinta);padding-top:14px}
+.persona h3{font-family:'Archivo Black';font-weight:400;font-size:1.3rem}
+.persona small{display:block;color:var(--cobalto);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.74rem;margin-bottom:.4rem}
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+.galeria img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+/* dónde */
+.donde{display:grid;gap:18px}
+.horas{list-style:none;border-top:1px solid var(--linea)}
+.horas li{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--linea)}
+.horas li.hoy{color:var(--cobalto);font-weight:700}
+iframe{width:100%;height:280px;border:0;border-radius:18px}
+footer{padding:30px 0 40px;color:var(--gris);font-size:.82rem;text-align:center}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;padding:10px 12px;background:#f8f9f6f2;backdrop-filter:blur(6px);border-top:1px solid var(--linea)}
+.barra .btn{flex:1;padding:.85rem}
+.solo-compu{display:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.ok{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+#turno{order:1}#ojos{order:2}#opiniones{order:3}#equipo{order:4}#donde{order:5}
+@media (min-width:900px){
+ body{padding-bottom:0}.barra{display:none}.solo-compu{display:block}
+ .hero{grid-template-columns:1.2fr .8fr;align-items:center;padding-top:60px;padding-bottom:50px}
+ #ojos{order:1}#turno{order:2}
+ .turno{padding:38px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+ .casos{grid-template-columns:repeat(3,1fr)}
+ .op{flex:0 0 32%}
+ .equipo{grid-template-columns:1fr 1fr}
+ .galeria{grid-template-columns:repeat(4,1fr)}
+ .donde{grid-template-columns:1fr 1.2fr;align-items:start}
+ iframe{height:360px}.desliza{display:none}
+}
+</style>
+</head>
+<body>
+<div class="muestra">Muestra preparada por newaves para Clínica Veterinaria PITA · No está publicada</div>
+<header class="wrap hero">
+ <div>
+  <div class="marca"><b>PITA</b> <i>Oftalmología veterinaria</i></div>
+  <h1>Los ojos de tu mascota, <span>en buenas manos.</span></h1>
+  <p class="l">Clínica veterinaria en Bv. Chacabuco 651, Nueva Córdoba, con algo que pocas tienen: oftalmología para perros y gatos con la Dra. Franca. Y clínica general, vacunas y urgencias, de lunes a sábado hasta las 21:30.</p>
+  <div class="acciones">
+   <a class="btn" href="#turno">Pedí un turno</a>
+   <a class="btn sec" href="https://wa.me/5493517519393" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <p class="nota"><b>4,6</b> en Google con <b>135 reseñas</b></p>
+ </div>
+ <div class="tabla" aria-hidden="true">
+  <div class="r r1">P</div>
+  <div class="r r2">I T</div>
+  <div class="r r3">A O J</div>
+  <div class="r r4">O S V E</div>
+  <div class="r r5">T E R I N A R I A</div>
+  <div class="pie"><span>Bv. Chacabuco 651</span><span>20/20</span></div>
+ </div>
+</header>
+
+<main class="main">
+<section id="turno" class="wrap reveal">
+ <div class="turno">
+  <div>
+   <div class="kicker">Turnos</div>
+   <h2>Pedí un <span>turno</span></h2>
+   <p class="sub">En PITA se atiende con cita. Elegí el motivo y la franja, y el mensaje sale armado al WhatsApp de la clínica.</p>
+  </div>
+  <form id="f">
+   <div class="paso">1 · Motivo</div>
+   <div class="chips" data-g="m">
+    <button type="button" class="chip" aria-pressed="true">Oftalmología</button>
+    <button type="button" class="chip" aria-pressed="false">Consulta general</button>
+    <button type="button" class="chip" aria-pressed="false">Vacunas</button>
+    <button type="button" class="chip" aria-pressed="false">Urgencia</button>
+   </div>
+   <div class="paso">2 · Paciente</div>
+   <div class="chips" data-g="a">
+    <button type="button" class="chip" aria-pressed="true">Perro</button>
+    <button type="button" class="chip" aria-pressed="false">Gato</button>
+   </div>
+   <div class="paso">3 · Franja</div>
+   <div class="chips" data-g="h">
+    <button type="button" class="chip" aria-pressed="true">Mañana</button>
+    <button type="button" class="chip" aria-pressed="false">Tarde</button>
+    <button type="button" class="chip" aria-pressed="false">Noche (hasta 21:30)</button>
+    <button type="button" class="chip" aria-pressed="false">Sábado</button>
+   </div>
+   <label class="n" for="n">4 · Nombre de tu mascota</label>
+   <input id="n" placeholder="Por ejemplo, Rambo">
+   <button class="btn" type="submit">Mandar por WhatsApp</button>
+   <p class="aviso">Si es una urgencia, mejor llamá: <a href="tel:+543517519393">351 751-9393</a>.</p>
+  </form>
+ </div>
+</section>
+
+<section id="ojos" class="wrap reveal">
+ <div class="kicker">Oftalmología</div>
+ <h2>Lo que <span>se ve</span> en sus reseñas</h2>
+ <p class="sub">Casos que contaron sus propios clientes en Google.</p>
+ <div class="casos">
+  <article class="caso"><div class="ojo"></div><h3>Prolapso de iris</h3><p>"Gracias a ella hoy mi gorda está bien, no perdió el ojo y la tengo conmigo sanita."</p><cite>Yamila B.</cite></article>
+  <article class="caso"><div class="ojo"></div><h3>Glaucoma</h3><p>"Operaron a mi gatita que tenía un glaucoma. La doctora siempre se encargó de tranquilizarme y me respondía los mensajes cuando tenía dudas. Volvió a ser la misma de siempre."</p><cite>Shamira A.</cite></article>
+  <article class="caso"><div class="ojo"></div><h3>Control de confianza</h3><p>"Que sea nuestra oftalmóloga de confianza. Rambo la ama."</p><cite>Georgina M.</cite></article>
+ </div>
+</section>
+
+<section id="opiniones" class="wrap reveal">
+ <div class="kicker">135 reseñas</div>
+ <h2>Lo que dicen <span>en la sala de espera</span></h2>
+ <div class="fila">
+  <blockquote class="op"><div class="est">★★★★★</div><p>De las mejores veterinarias de Nueva Córdoba. Cuenta con oftalmología y Franca atiende a las mascotas con mucho cariño y paciencia.</p><cite>Ray F.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Me explicó detalladamente qué tenía y para qué servía cada medicamento, dejó todas las indicaciones por escrito. Se quedó más tiempo para asegurarse de atenderlo bien.</p><cite>Denise A.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Georgi, la vete que atendió a mi bebé hoy, increíble. Súper empática, atenta y una revisión completísima que me dejó tranquila.</p><cite>Pachu E.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Hace 3 años que lo llevamos a Romu y siempre lo atiende muy bien y es súper amorosa.</p><cite>María Silvia L.</cite></blockquote>
+ </div>
+ <p class="desliza">Deslizá para ver más →</p>
+</section>
+
+<section id="equipo" class="wrap reveal solo-compu">
+ <div class="kicker">El equipo</div>
+ <h2>Quiénes <span>te atienden</span></h2>
+ <div class="equipo">
+  <div class="persona"><small>Oftalmología</small><h3>Dra. Franca</h3><p>La más nombrada en sus reseñas: cirugías de ojo, controles y el seguimiento por mensaje cuando quedan dudas en casa.</p></div>
+  <div class="persona"><small>Clínica</small><h3>Georgi</h3><p>"Una revisión completísima que me dejó tranquila." Consultas generales de perros y gatos.</p></div>
+ </div>
+ <div class="galeria">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TEI7CCexN7mTDrhclrMcF6FXRQy49Wnl6RHB8ctFZq90fiLNX-RS98r8LR5uIngipBCblgGxopU9jToNl6sVa_CstsRXltMym5FORrWHUefZTrnhtz3HyPLIGs5M2mWtn3N09i4vrLarL-=w1000-h750-k-no" alt="Foto de Clínica Veterinaria PITA">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R5ipHvUd3LIoTfn8ZoTRZ_Iq9vC0chs616ncFgUom2H-ZCreyTl72KDof_8mJ2nTxQpQlxYcnH6S5bUP1LG1gQw7YEajHSPyYdaLxFFnL4bGPiwjdgP9DulEvUggb8gQgaKs9c=w1000-h750-k-no" alt="Foto de Clínica Veterinaria PITA">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RBGwtK4TGiqRrEMq-9ORLan_VnY8iMX8NK-WjavBG_IfhjCZLfvLWiopb9-3JMsnoTkaKSK5ZXQ9JhTNU2CxsqIQcQGcqR1m5XiQw_f5Du0As5f5-VVy6PRCVHkojhj0Y7y5rQYKCyEAy3=w1000-h750-k-no" alt="Foto de Clínica Veterinaria PITA">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S_5aKR1GwZjmASo47YE_qNrJVZmaIcC-h_v_74mx3wT3MLrG5y5grD9tWlHj6c55kWNyftesLwklrc1d4SnUNMe9XZMbMvgut3_NiBcIaro9TaS4s8fceb777D1hMrGGjwuZDp=w1000-h750-k-no" alt="Foto de Clínica Veterinaria PITA">
+ </div>
+</section>
+
+<section id="donde" class="wrap reveal">
+ <div class="donde">
+  <div>
+   <div class="kicker">Dónde estamos</div>
+   <h2>Bv. Chacabuco 651</h2>
+   <p class="sub">Nueva Córdoba. Se recomienda pedir turno antes de ir.</p>
+   <ul class="horas" id="horas">
+    <li data-d="1"><span>Lunes a viernes</span><span>10 a 21:30</span></li>
+    <li data-d="6"><span>Sábado</span><span>11 a 21:30</span></li>
+    <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+   </ul>
+   <div class="acciones"><a class="btn sec" href="https://www.instagram.com/oftalmovet.cba/" target="_blank" rel="noopener">@oftalmovet.cba</a></div>
+  </div>
+  <iframe title="Mapa de Clínica Veterinaria PITA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Clinica%20Veterinaria%20PITA%2C%20Blvr.%20Chacabuco%20651%2C%20C%C3%B3rdoba&output=embed"></iframe>
+ </div>
+</section>
+</main>
+
+<footer class="wrap">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</footer>
+<nav class="barra"><a class="btn" href="#turno">Pedir turno</a><a class="btn sec" href="tel:+543517519393">Llamar</a></nav>
+
+<script>
+(function(){
+ var wa='5493517519393';
+ document.querySelectorAll('.chips').forEach(function(g){
+  g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+   g.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});
+ });
+ function sel(k){var b=document.querySelector('[data-g="'+k+'"] [aria-pressed=true]');return b?b.textContent:'';}
+ document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+  var m0=sel('m')||'Consulta general',a=sel('a'),h=sel('h'),n=document.getElementById('n').value.trim();
+  var fr=h==='Sábado'?'el sábado':(h?'a la '+h.toLowerCase().replace(' (hasta 21:30)',''):'');
+  var m='¡Hola PITA! Quería pedir un turno de '+m0.toLowerCase()+' para '+(n?n+', mi '+a.toLowerCase():'mi '+a.toLowerCase())+(fr?', '+fr:'')+'. ¿Qué disponibilidad tienen?';
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(m),'_blank');
+ });
+ var d=new Date().getDay();var li=document.querySelector('#horas [data-d="'+(d>=1&&d<=5?1:d)+'"]');if(li)li.className='hoy';
+ document.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+ var r=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ok');io.unobserve(x.target)}})},{threshold:.12});r.forEach(function(x){io.observe(x)})}else{r.forEach(function(x){x.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>

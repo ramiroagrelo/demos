@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>R&amp;B Barbería · Bv. Chacabuco 636</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Barlow+Condensed:wght@500;700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--pano:#1d4433;--pano2:#163527;--ambar:#d08a2b;--naipe:#f4ecda;--tinta:#151a17;--rojo:#b8322a;--gris:#a9b8ad}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--pano);color:var(--naipe);line-height:1.5;padding-bottom:80px;background-image:radial-gradient(#ffffff08 1px,transparent 1px);background-size:5px 5px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.muestra{background:var(--naipe);color:var(--tinta);font-size:.78rem;text-align:center;padding:.45rem 1rem;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.main{display:flex;flex-direction:column}
+.main>section{min-width:0;width:100%}
+.fila{min-width:0;max-width:100%}
+section{padding:42px 0}
+h2{font-family:Rye,serif;font-weight:400;font-size:clamp(1.9rem,7.5vw,3.1rem);line-height:1.05;color:var(--ambar);margin-bottom:.5rem}
+.sub{color:var(--gris);max-width:52ch;margin-bottom:1.3rem}
+.kicker{font:700 .8rem 'Barlow Condensed',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
+/* portada */
+.hero{padding-top:22px;padding-bottom:10px;display:grid;gap:26px}
+.marca{display:flex;align-items:center;gap:.6rem;font:700 1rem 'Barlow Condensed';letter-spacing:.2em;text-transform:uppercase}
+.marca b{font-family:Rye;font-weight:400;font-size:1.7rem;letter-spacing:0;color:var(--ambar)}
+.hero h1{font-family:Rye,serif;font-weight:400;font-size:clamp(2.5rem,11.5vw,5.4rem);line-height:.98;margin:.35em 0 .3em}
+.hero h1 em{font-style:normal;color:var(--ambar)}
+.hero p.l{font-size:1.08rem;max-width:44ch;color:#dfe6df}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--ambar);color:var(--tinta);text-decoration:none;font:700 1.05rem 'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:.95rem 1.4rem;border-radius:10px;border:0;cursor:pointer}
+.btn.sec{background:transparent;color:var(--naipe);border:2px solid #f4ecda66}
+.acciones{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.cifras{display:flex;gap:18px;margin-top:1.3rem;font:700 1rem 'Barlow Condensed';letter-spacing:.06em;text-transform:uppercase;color:var(--gris)}
+.cifras b{display:block;font-family:Rye;font-weight:400;font-size:1.8rem;color:var(--naipe);letter-spacing:0}
+/* abanico de naipes */
+.mano{position:relative;height:330px;max-width:360px;width:100%;justify-self:center}
+.carta{position:absolute;left:50%;bottom:0;width:190px;height:280px;margin-left:-95px;border-radius:14px;background:var(--naipe);border:6px solid var(--naipe);box-shadow:0 18px 40px #0007;transform-origin:50% 110%;overflow:hidden}
+.carta img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.carta.c1{transform:rotate(-16deg)}.carta.c2{transform:rotate(0)}.carta.c3{transform:rotate(16deg)}
+.carta.c2{z-index:2}
+.carta .palo{position:absolute;top:6px;left:8px;font:400 1.3rem Rye;color:var(--rojo);background:var(--naipe);border-radius:6px;padding:0 .35rem;line-height:1.3}
+@media (prefers-reduced-motion:no-preference){.carta{transition:transform .9s cubic-bezier(.2,.8,.2,1)}.mano:not(.abierta) .carta{transform:rotate(0)}}
+/* turno */
+.mesa{background:var(--pano2);border:2px dashed #f4ecda33;border-radius:22px;padding:22px}
+.paso{font:700 .82rem 'Barlow Condensed';letter-spacing:.18em;text-transform:uppercase;color:var(--ambar);margin:.3rem 0 .6rem}
+.fichas{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.ficha{border:2px solid #f4ecda40;background:transparent;color:var(--naipe);border-radius:999px;padding:.55rem .95rem;font:600 .95rem Barlow,sans-serif;cursor:pointer}
+.ficha[aria-pressed=true]{background:var(--naipe);color:var(--tinta);border-color:var(--naipe)}
+label.n{display:block;font:700 .82rem 'Barlow Condensed';letter-spacing:.18em;text-transform:uppercase;color:var(--ambar);margin:.3rem 0 .4rem}
+input{width:100%;font:1rem Barlow,sans-serif;padding:.8rem 1rem;border-radius:10px;border:2px solid #f4ecda40;background:#0f251b;color:var(--naipe);margin-bottom:1rem}
+.mesa .btn{width:100%}
+.aviso{font-size:.85rem;color:var(--gris);margin-top:.7rem}
+/* carruseles */
+.fila{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.fila::-webkit-scrollbar{height:6px}.fila::-webkit-scrollbar-thumb{background:#f4ecda33;border-radius:3px}
+.desliza{font-size:.85rem;color:var(--gris);margin-top:.3rem}
+.serv{scroll-snap-align:start;flex:0 0 72%;max-width:280px;background:var(--naipe);color:var(--tinta);border-radius:14px;padding:18px 18px 22px;position:relative}
+.serv .num{font:400 2.2rem Rye;color:var(--rojo);line-height:1}
+.serv h3{font:700 1.35rem 'Barlow Condensed';text-transform:uppercase;letter-spacing:.04em;margin:.5rem 0 .2rem}
+.serv p{font-size:.95rem;color:#4b4a43}
+.op{scroll-snap-align:start;flex:0 0 86%;max-width:380px;background:#0f251b;border-left:4px solid var(--ambar);border-radius:14px;padding:22px}
+.op .est{color:var(--ambar);letter-spacing:.15em;margin-bottom:.5rem}
+.op p{font-size:1.04rem;margin-bottom:.9rem}
+.op cite{font:700 .92rem 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;font-style:normal;color:var(--gris)}
+/* la casa */
+.casa{display:grid;gap:14px}
+.casa .item{background:#0f251b;border-radius:14px;padding:18px}
+.casa h3{font-family:Rye;font-weight:400;color:var(--ambar);font-size:1.4rem;margin-bottom:.3rem}
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.galeria img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;filter:contrast(1.05) saturate(.95)}
+/* dónde */
+.donde{display:grid;gap:18px}
+.horas{list-style:none;border-top:1px solid #f4ecda26}
+.horas li{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px solid #f4ecda26}
+.horas li.hoy{color:var(--ambar);font-weight:600}
+iframe{width:100%;height:280px;border:0;border-radius:16px;filter:grayscale(.35)}
+footer{padding:30px 0 40px;color:var(--gris);font-size:.82rem;text-align:center}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;padding:10px 12px;background:#0f251bee;backdrop-filter:blur(6px);border-top:1px solid #f4ecda22}
+.barra .btn{flex:1;padding:.85rem}
+.solo-compu{display:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.ok{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* orden en celular */
+#turno{order:1}#servicios{order:2}#opiniones{order:3}#casa{order:4}#donde{order:5}
+@media (min-width:900px){
+ body{padding-bottom:0}.barra{display:none}.solo-compu{display:block}
+ .hero{grid-template-columns:1.1fr .9fr;align-items:center;padding-top:60px;padding-bottom:40px}
+ .mano{height:420px;max-width:440px}.carta{width:230px;height:340px;margin-left:-115px}
+ #opiniones{order:2}#servicios{order:3}
+ .mesa{padding:38px;display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
+ .serv{flex:0 0 23%}.op{flex:0 0 32%}
+ .casa{grid-template-columns:repeat(3,1fr)}
+ .galeria{grid-template-columns:repeat(4,1fr)}
+ .donde{grid-template-columns:1fr 1.2fr;align-items:start}
+ iframe{height:360px}.desliza{display:none}
+}
+</style>
+</head>
+<body>
+<div class="muestra">Muestra preparada por newaves para R&amp;B Barbería · No está publicada</div>
+<header class="wrap hero">
+ <div>
+  <div class="marca"><b>R&amp;B</b> Barbería · Nueva Córdoba</div>
+  <h1>Corte, whisky y <em>un truco</em> si te animás.</h1>
+  <p class="l">En Bv. Chacabuco 636. Te sentás, te sirven un whisky y salís con el corte que pediste. Y hubo quien les ganó a los dueños en el truco y se fue con el corte gratis.</p>
+  <div class="acciones">
+   <a class="btn" href="#turno">Pedí tu turno</a>
+   <a class="btn sec" href="https://wa.me/5493537672858" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <div class="cifras"><span><b>5,0</b>en Google</span><span><b>84</b>reseñas</span><span><b>21 h</b>cierran</span></div>
+ </div>
+ <div class="mano" id="mano" aria-hidden="true">
+  <div class="carta c1"><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Serei8WOgaBl8_IkfSLN7n45cFgDOtnMhzpa_xpLZNZkgcg9ziKRi_b8Dha0ha1qIVtVgzGBatZY53I_p-hPMDkX1Y0fdWTcF_qI_qua9VIH3UnRs-p4WrMGgtKIGKOaRW0OIuREYXl1ww=w900-h1200-k-no" alt=""><span class="palo">1</span></div>
+  <div class="carta c3"><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ScCaQraT2lLBNUroY0BIvUU9mLzRH439kqKaQW-ge2R3l16OBKulvyCx5oa4usfk0rtiI2JEEnhr30JORBBPiNxQWY2XyeRkcGfhl26bpPq1PcF4CmRhR8Zusub-tiFQLKyQZt7KP36-Y=w900-h1200-k-no" alt=""><span class="palo">7</span></div>
+  <div class="carta c2"><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RZFPBgqROdIMsz3GapQmCrf4lfghytVdf767mjXge69NTHfQPhfIQYcvINF8yYZyBizqqWZaCuYSEYr_HI70rxaSHhB5nA1PlhpKKt2tBKGA0DtG_5OXmBePkhTDsJWshsn8bcpsmkZwA=w1920-h1440-k-no" alt="El local de R&amp;B Barbería"><span class="palo">R&amp;B</span></div>
+ </div>
+</header>
+
+<main class="main">
+<section id="turno" class="wrap reveal">
+ <div class="mesa">
+  <div>
+   <div class="kicker">Repartí las cartas</div>
+   <h2>Pedí tu turno</h2>
+   <p class="sub">Elegí qué te hacés y cuándo te queda bien. Se arma el mensaje y te lleva al WhatsApp de la barbería.</p>
+  </div>
+  <form id="f">
+   <div class="paso">1 · Qué te hacés</div>
+   <div class="fichas" data-g="s">
+    <button type="button" class="ficha" aria-pressed="true">Corte</button>
+    <button type="button" class="ficha" aria-pressed="false">Corte con tijera</button>
+    <button type="button" class="ficha" aria-pressed="false">Rapado</button>
+    <button type="button" class="ficha" aria-pressed="false">Afeitado</button>
+    <button type="button" class="ficha" aria-pressed="false">Corte y cejas</button>
+   </div>
+   <div class="paso">2 · Cuándo</div>
+   <div class="fichas" data-g="h">
+    <button type="button" class="ficha" aria-pressed="true">Mañana (10 a 13)</button>
+    <button type="button" class="ficha" aria-pressed="false">Tarde (16 a 21)</button>
+    <button type="button" class="ficha" aria-pressed="false">Sábado</button>
+   </div>
+   <label class="n" for="n">3 · Tu nombre</label>
+   <input id="n" autocomplete="given-name" placeholder="Para saber a quién esperar">
+   <button class="btn" type="submit">Mandar por WhatsApp</button>
+   <p class="aviso">De martes a sábado. Domingo y lunes, cerrado.</p>
+  </form>
+ </div>
+</section>
+
+<section id="servicios" class="wrap reveal">
+ <div class="kicker">La mano</div>
+ <h2>Lo que más piden</h2>
+ <p class="sub">Lo que cuentan sus clientes en Google.</p>
+ <div class="fila">
+  <article class="serv"><div class="num">1</div><h3>Corte</h3><p>"Me entendieron bien en lo que quería hacerme." Pelo corto o largo, como lo traigas pensado.</p></article>
+  <article class="serv"><div class="num">2</div><h3>Rapado</h3><p>A máquina y prolijo, para salir listo.</p></article>
+  <article class="serv"><div class="num">3</div><h3>Corte con tijera</h3><p>Cuando el corte pide tijera y paciencia.</p></article>
+  <article class="serv"><div class="num">4</div><h3>Afeitado</h3><p>Barba y cejas, para salir completo.</p></article>
+  <article class="serv"><div class="num">5</div><h3>Para los chicos</h3><p>"Llevé a mi hermanito y salió contentísimo con su corte."</p></article>
+ </div>
+ <p class="desliza">Deslizá para ver más →</p>
+</section>
+
+<section id="opiniones" class="wrap reveal">
+ <div class="kicker">84 reseñas · 5 estrellas</div>
+ <h2>Lo que dicen en la mesa</h2>
+ <div class="fila">
+  <blockquote class="op"><div class="est">★★★★★</div><p>Excelente atención, buen servicio, y le gané a los dueños en el truco (corte gratis).</p><cite>Juan Claudio C.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Excelente servicio, los chicos unos genios y ricaso el whisky.</p><cite>Francisco U.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Re copados los chicos, buena atención y me entendieron bien en lo que quería hacerme.</p><cite>Facundo A.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Excelente servicio y todo muy limpio! Llevé a mi hermanito y salió contentísimo con su corte.</p><cite>Jimena G.</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Perfecta atención, jóvenes muy sabios y excelente el peluquero, volveré.</p><cite>Paolo</cite></blockquote>
+  <blockquote class="op"><div class="est">★★★★★</div><p>Excelente lugar, muy buena atención tanto del barbero como de los dueños.</p><cite>Genaro P.</cite></blockquote>
+ </div>
+ <p class="desliza">Deslizá para ver más →</p>
+</section>
+
+<section id="casa" class="wrap reveal solo-compu">
+ <div class="kicker">Así se vive</div>
+ <h2>La casa invita</h2>
+ <div class="casa">
+  <div class="item"><h3>El whisky</h3><p>De cortesía mientras esperás o mientras te cortan. Es lo que más se repite en sus reseñas.</p></div>
+  <div class="item"><h3>El truco</h3><p>Hubo quien les ganó una mano a los dueños y se llevó el corte gratis.</p></div>
+  <div class="item"><h3>El partido</h3><p>Si juega tu equipo, lo ves ahí mismo, sin perderte nada.</p></div>
+ </div>
+ <div class="galeria">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T2r3ua4uZpqwV48IImCc9rbDvuVCailt07RHlv7w7ov_4XNBYQvjkP0Ht8OePydm6xnxMma6K2uZyxWf1jYMmIBmmBIc0e8CYpj692FQP11Ld83Ljm1EJMYiSCTGFmsO5gJPFtHu2P75FO=w800-h800-k-no" alt="Foto de R&amp;B Barbería">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SH2stf5CWA6A4k0Z95Ss6sbXXRrBSMma9AHdN14ud0JJ6a2NE26Ysvinw8cWMW_4SkbpvFKUiHqftJZL_EzrASVISEb7bjVtJQOzcO3_WOrHeEW8tQUUMCZJDBWBSdlu2gv6ighKiksTs=w800-h800-k-no" alt="Foto de R&amp;B Barbería">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RmsTGVPgQ-M7HbEt4xQIn3vv-d94Q357ZpFhf0PSAqVaZOULS4Wc1neCvILW-BrccuDL0SSRDSwncIomxWLu7tMJ6axRGt2sUMnrCmFACvsJYcFnwYbgX3JldGy1zhCfOt77MVbb0A5mFI=w800-h800-k-no" alt="Foto de R&amp;B Barbería">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R2dzbuCEsSsnSHtyJ5hkclLom8XMQdlrayRW6fT2bd9oWDKS_7qWU5RPg9jy1yb7vk2j15uJLMwl5QthBrSJh06P2y9C4HppHXz-sCYPRap1Gf_T9EPguqochrNrPpEMUZi8uxIM7b-ci7=w800-h800-k-no" alt="Foto de R&amp;B Barbería">
+ </div>
+</section>
+
+<section id="donde" class="wrap reveal">
+ <div class="donde">
+  <div>
+   <div class="kicker">Dónde estamos</div>
+   <h2>Bv. Chacabuco 636</h2>
+   <p class="sub">Nueva Córdoba. Pagás con tarjeta, débito o con el celular.</p>
+   <ul class="horas" id="horas">
+    <li data-d="2"><span>Martes</span><span>10 a 13 · 16 a 21</span></li>
+    <li data-d="3"><span>Miércoles</span><span>10 a 13 · 16 a 21</span></li>
+    <li data-d="4"><span>Jueves</span><span>10 a 13 · 16 a 21</span></li>
+    <li data-d="5"><span>Viernes</span><span>11 a 21</span></li>
+    <li data-d="6"><span>Sábado</span><span>10 a 13 · 16 a 21</span></li>
+    <li data-d="0"><span>Domingo y lunes</span><span>Cerrado</span></li>
+   </ul>
+   <div class="acciones"><a class="btn sec" href="https://www.instagram.com/rb.barber_cba/" target="_blank" rel="noopener">@rb.barber_cba</a></div>
+  </div>
+  <iframe title="Mapa de R&amp;B Barbería" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=R%26B%20barberia%2C%20Blvr.%20Chacabuco%20636%2C%20C%C3%B3rdoba&output=embed"></iframe>
+ </div>
+</section>
+</main>
+
+<footer class="wrap">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</footer>
+<nav class="barra"><a class="btn" href="#turno">Pedir turno</a><a class="btn sec" href="tel:+543537672858">Llamar</a></nav>
+
+<script>
+(function(){
+ var wa='5493537672858';
+ document.querySelectorAll('.fichas').forEach(function(g){
+  g.addEventListener('click',function(e){var b=e.target.closest('.ficha');if(!b)return;
+   g.querySelectorAll('.ficha').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});
+ });
+ function sel(k){var b=document.querySelector('[data-g="'+k+'"] [aria-pressed=true]');return b?b.textContent:'';}
+ document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+  var s=sel('s')||'un corte',h=sel('h'),n=document.getElementById('n').value.trim();
+  var m='¡Hola R&B! '+(n?'Soy '+n+'. ':'')+'Quería un turno para '+s.toLowerCase()+(h?', '+(h==='Sábado'?'el sábado':'a la '+h.toLowerCase()):'')+'. ¿Qué tienen libre?';
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(m),'_blank');
+ });
+ var d=new Date().getDay();var li=document.querySelector('#horas [data-d="'+(d===1?0:d)+'"]');if(li)li.className='hoy';
+ document.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){var c=i.closest('.carta');if(c)c.style.background='var(--naipe)';i.style.display='none'})});
+ var mano=document.getElementById('mano');setTimeout(function(){mano.classList.add('abierta')},250);
+ var r=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ok');io.unobserve(x.target)}})},{threshold:.12});r.forEach(function(x){io.observe(x)})}else{r.forEach(function(x){x.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>

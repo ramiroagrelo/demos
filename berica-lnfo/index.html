@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Berica Estética · Obispo Trejo 1040</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--euca:#4f7d6b;--euca2:#3c6455;--manteca:#f7f1e3;--durazno:#f1b59a;--cacao:#3b2c25;--suave:#e8efe7;--gris:#6f7d75}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--manteca);color:var(--cacao);line-height:1.55;padding-bottom:80px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.muestra{background:var(--euca2);color:var(--manteca);font-size:.78rem;text-align:center;padding:.45rem 1rem;font-weight:500}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+.main{display:flex;flex-direction:column}
+.main>section{min-width:0;width:100%}
+.fila{min-width:0;max-width:100%}
+section{padding:42px 0}
+h2{font-family:Fraunces,serif;font-weight:400;font-size:clamp(1.9rem,7vw,3rem);line-height:1.08;color:var(--euca2);margin-bottom:.5rem}
+h2 i{color:#c97a58}
+.sub{color:var(--gris);max-width:52ch;margin-bottom:1.3rem}
+.kicker{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c97a58}
+/* portada */
+.hero{padding-top:24px;padding-bottom:12px;display:grid;gap:24px}
+.marca{font-family:Fraunces,serif;font-size:1.7rem;color:var(--euca2);display:flex;align-items:baseline;gap:.5rem}
+.marca small{font-family:'Instrument Sans';font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gris)}
+.hero h1{font-family:Fraunces,serif;font-weight:400;font-size:clamp(2.4rem,10.5vw,5rem);line-height:1.02;margin:.35em 0 .3em;letter-spacing:-.01em}
+.hero h1 i{color:var(--euca)}
+.hero .l{font-size:1.08rem;max-width:44ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--euca2);color:var(--manteca);text-decoration:none;font:600 1rem 'Instrument Sans',sans-serif;padding:.95rem 1.4rem;border-radius:999px;border:0;cursor:pointer}
+.btn.sec{background:transparent;color:var(--euca2);border:1.5px solid var(--euca2)}
+.acciones{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.nota{margin-top:1rem;font-size:.92rem;color:var(--gris)}
+.nota b{color:var(--cacao)}
+/* receta: idea protagonista */
+.foto{position:relative;max-width:380px;width:100%;justify-self:center}
+.foto .f{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--suave)}
+@media (max-width:899px){.foto .f{aspect-ratio:4/3}}
+.foto img{width:100%;height:100%;object-fit:cover;filter:saturate(1.03)}
+.receta{position:absolute;left:-10px;bottom:-18px;width:76%;background:#fffdf7;border-radius:6px;padding:14px 16px 16px;box-shadow:0 14px 30px #3b2c2522;transform:rotate(-3deg);font-size:.86rem}
+.receta:before{content:"";position:absolute;top:-8px;left:50%;width:54px;height:16px;margin-left:-27px;background:#f1b59a99;transform:rotate(2deg)}
+.receta b{display:block;font-family:Fraunces;font-weight:600;font-size:1rem;color:var(--euca2);margin-bottom:.3rem}
+.receta li{list-style:none;border-bottom:1px dashed #3b2c2533;padding:.25rem 0}
+/* ficha de piel */
+.ficha{background:#fff;border-radius:26px;padding:22px;box-shadow:0 10px 30px #3c645514}
+.paso{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin:.4rem 0 .6rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.chip{border:1.5px solid #4f7d6b55;background:var(--manteca);border-radius:999px;padding:.55rem .95rem;font:500 .95rem 'Instrument Sans',sans-serif;color:var(--cacao);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--euca);border-color:var(--euca);color:#fff}
+label.n{display:block;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin:.4rem 0 .4rem}
+input{width:100%;font:1rem 'Instrument Sans',sans-serif;padding:.8rem 1rem;border-radius:14px;border:1.5px solid #4f7d6b44;background:var(--manteca);margin-bottom:1rem;color:var(--cacao)}
+.ficha .btn{width:100%}
+.aviso{font-size:.85rem;color:var(--gris);margin-top:.7rem}
+/* carruseles */
+.fila{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.desliza{font-size:.85rem;color:var(--gris);margin-top:.3rem}
+.trat{scroll-snap-align:start;flex:0 0 74%;max-width:300px;background:var(--suave);border-radius:20px;padding:20px}
+.trat h3{font-family:Fraunces;font-weight:600;font-size:1.3rem;color:var(--euca2);margin-bottom:.3rem}
+.trat p{font-size:.95rem}
+.trat .gota{width:26px;height:34px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--durazno);margin-bottom:.8rem;transform:rotate(180deg)}
+.op{scroll-snap-align:start;flex:0 0 86%;max-width:380px;background:#fff;border-radius:20px;padding:22px;border-top:4px solid var(--durazno)}
+.op p{font-family:Fraunces;font-size:1.08rem;line-height:1.45;margin-bottom:.9rem}
+.op cite{font-style:normal;font-size:.88rem;font-weight:600;color:var(--euca)}
+/* equipo y espacio */
+.duo{display:grid;gap:14px}
+.duo .item{border-left:3px solid var(--durazno);padding-left:16px}
+.duo h3{font-family:Fraunces;font-weight:600;font-size:1.3rem;color:var(--euca2)}
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}
+.galeria img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px}
+/* dónde */
+.donde{display:grid;gap:18px}
+.horas{list-style:none;border-top:1px solid #3b2c251f}
+.horas li{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid #3b2c251f}
+.horas li.hoy{color:var(--euca);font-weight:600}
+iframe{width:100%;height:280px;border:0;border-radius:20px}
+footer{padding:30px 0 40px;color:var(--gris);font-size:.82rem;text-align:center}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:8px;padding:10px 12px;background:#f7f1e3f2;backdrop-filter:blur(6px);border-top:1px solid #3b2c251a}
+.barra .btn{flex:1;padding:.85rem}
+.solo-compu{display:none}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.ok{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+#turno{order:1}#tratamientos{order:2}#opiniones{order:3}#equipo{order:4}#donde{order:5}
+@media (min-width:900px){
+ body{padding-bottom:0}.barra{display:none}.solo-compu{display:block}
+ .hero{grid-template-columns:1.15fr .85fr;align-items:center;padding-top:60px;padding-bottom:50px}
+ .ficha{padding:38px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+ .trat{flex:0 0 24%}.op{flex:0 0 32%}
+ .duo{grid-template-columns:1fr 1fr}
+ .galeria{grid-template-columns:repeat(4,1fr)}
+ .donde{grid-template-columns:1fr 1.2fr;align-items:start}
+ iframe{height:360px}.desliza{display:none}
+ #opiniones{order:1}#turno{order:2}#tratamientos{order:3}
+}
+</style>
+</head>
+<body>
+<div class="muestra">Muestra preparada por newaves para Berica Estética · No está publicada</div>
+<header class="wrap hero">
+ <div>
+  <div class="marca">Berica <small>Estética · Nueva Córdoba</small></div>
+  <h1>Entrás con la piel <i>cascoteada</i>.<br>Salís liviana.</h1>
+  <p class="l">Limpiezas faciales, masajes y depilación definitiva en Obispo Trejo 1040. Te explican cada paso mientras lo hacen y, al final, te mandan la lista de productos para tu tipo de piel.</p>
+  <div class="acciones">
+   <a class="btn" href="#turno">Pedí tu turno</a>
+   <a class="btn sec" href="https://wa.me/5493517885606" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <p class="nota"><b>4,9</b> en Google con <b>55 reseñas</b> · de lunes a viernes de 9 a 21</p>
+ </div>
+ <div class="foto">
+  <div class="f"><img referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QKvH2mudNgu6hymEJ-mnj_dXWFT3f6J1A21v15clfHR0Ssi6d1Q9O8MeMFri-jpmWDzpDC1M0vLLY-oXA7x9OzqLdQFpx4onsRVVhIG0lskbxzk19QCN8iNDAwcKtWsSE1FmrYwvG-t8W8=w1920-h1440-k-no" alt="El espacio de Berica Estética"></div>
+  <div class="receta" aria-hidden="true"><b>Tu lista, después del facial</b><ul><li>Según tu tipo de piel</li><li>Te la mandan al celular</li><li>Para seguir en casa</li></ul></div>
+ </div>
+</header>
+
+<main class="main">
+<section id="turno" class="wrap reveal">
+ <div class="ficha">
+  <div>
+   <div class="kicker">Ficha de piel</div>
+   <h2>Contanos cómo viene <i>tu piel</i></h2>
+   <p class="sub">Elegí qué querés hacerte y cuándo te queda cómodo. Se arma el mensaje y lo mandás al WhatsApp de Berica.</p>
+  </div>
+  <form id="f">
+   <div class="paso">1 · Qué te querés hacer</div>
+   <div class="chips" data-g="t">
+    <button type="button" class="chip" aria-pressed="true">Limpieza facial</button>
+    <button type="button" class="chip" aria-pressed="false">Limpieza profunda</button>
+    <button type="button" class="chip" aria-pressed="false">Masajes</button>
+    <button type="button" class="chip" aria-pressed="false">Depilación definitiva</button>
+    <button type="button" class="chip" aria-pressed="false">Que me asesoren</button>
+   </div>
+   <div class="paso">2 · Tu piel hoy</div>
+   <div class="chips" data-g="p">
+    <button type="button" class="chip" aria-pressed="false">Grasa</button>
+    <button type="button" class="chip" aria-pressed="false">Seca</button>
+    <button type="button" class="chip" aria-pressed="false">Mixta</button>
+    <button type="button" class="chip" aria-pressed="false">Sensible</button>
+    <button type="button" class="chip" aria-pressed="false">No sé</button>
+   </div>
+   <div class="paso">3 · Cuándo</div>
+   <div class="chips" data-g="h">
+    <button type="button" class="chip" aria-pressed="true">Mañana</button>
+    <button type="button" class="chip" aria-pressed="false">Siesta</button>
+    <button type="button" class="chip" aria-pressed="false">Tarde</button>
+    <button type="button" class="chip" aria-pressed="false">Después de las 19</button>
+   </div>
+   <label class="n" for="n">4 · Tu nombre</label>
+   <input id="n" autocomplete="given-name" placeholder="Así te esperan">
+   <button class="btn" type="submit">Mandar por WhatsApp</button>
+   <p class="aviso">Atienden de lunes a viernes. Sábado y domingo, cerrado.</p>
+  </form>
+ </div>
+</section>
+
+<section id="tratamientos" class="wrap reveal">
+ <div class="kicker">Lo que hacen</div>
+ <h2>Tratamientos</h2>
+ <p class="sub">Los que más nombran sus clientas.</p>
+ <div class="fila">
+  <article class="trat"><div class="gota"></div><h3>Limpieza facial</h3><p>La estrella: aparece en 13 reseñas. "La cara queda excelente, sin irritación."</p></article>
+  <article class="trat"><div class="gota"></div><h3>Limpieza profunda</h3><p>"Fui el martes para una limpieza profunda y la piel me quedó súper linda."</p></article>
+  <article class="trat"><div class="gota"></div><h3>Masajes</h3><p>"Me hice masajes y faciales que súper recomiendo también."</p></article>
+  <article class="trat"><div class="gota"></div><h3>Depilación definitiva</h3><p>"Me he hecho depi definitiva en otros centros y nunca tuve tan buenos resultados."</p></article>
+ </div>
+ <p class="desliza">Deslizá para ver más →</p>
+</section>
+
+<section id="opiniones" class="wrap reveal">
+ <div class="kicker">4,9 · 55 reseñas</div>
+ <h2>Lo que cuentan <i>al salir</i></h2>
+ <div class="fila">
+  <blockquote class="op"><p>Gracias Bere y Fede por la calidez, el cuidado y la atención. Entré con la piel bastante cascoteada y salí impecable y liviana.</p><cite>Valentina R.</cite></blockquote>
+  <blockquote class="op"><p>Fue mi primera vez haciéndome una limpieza facial. Federica fue explicando lo que iba haciendo para que tenga previsión de lo que podía llegar a sentir.</p><cite>Daviana</cite></blockquote>
+  <blockquote class="op"><p>Es un espacio hermoso y cálido! No esperás nada para ser atendida, tiene un montón de tratamientos. Te asesoran. Un 10/10 sin dudas.</p><cite>Paula A.</cite></blockquote>
+  <blockquote class="op"><p>Luego de la limpieza me mandaron un listado con los productos que debería comprar según mi tipo de piel. Quedé encantado!</p><cite>Valen C.</cite></blockquote>
+  <blockquote class="op"><p>Las chicas son lo más! Los tratamientos son muy efectivos.</p><cite>Juliana N.</cite></blockquote>
+ </div>
+ <p class="desliza">Deslizá para ver más →</p>
+</section>
+
+<section id="equipo" class="wrap reveal solo-compu">
+ <div class="kicker">Quiénes te atienden</div>
+ <h2>Bere, Fede y <i>las chicas</i></h2>
+ <div class="duo">
+  <div class="item"><h3>Te explican todo</h3><p>Varias reseñas cuentan lo mismo: si es tu primera vez, te van diciendo qué hacen y qué vas a sentir.</p></div>
+  <div class="item"><h3>Y te siguen en casa</h3><p>Después del facial te llega la lista de productos para tu tipo de piel, para que el resultado dure.</p></div>
+ </div>
+ <div class="galeria">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SLU07pV1nChOAPgjYpEeffXzni2R5dwu3NBeZ_NK7Sz6hKVDdnbDt-g9tw6fmkToT6IE7zM_rfLMmEr89sZBbKnWeihmnIAwaSs259ddx6TdDADE3M6JaYVNEQHyl0KbAtdFcADQR8UrML=w800-h800-k-no" alt="Foto de Berica Estética">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RQ9lXunJBA0CGAN7GtnGBgXDI6auKek045M5YKSbhVtadqK18-4oPOo5byH3TDrMqiwTqt7jQQ-vLX2VG0pmtpGW4t1mNh3Dxwa88ybA9whAlOE4VGu0mwIN3fH7QMMfD_ZRapqD-iVrs=w800-h800-k-no" alt="Foto de Berica Estética">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T--j2TpavvEVmMAJiPH2ZQalcG6nc2vZmE4tBKVxzKKDWjhqdi7pkIn14Q2m_RlWOXrgECGrSbS2MfQrayJYiIJZBGMz6C9V9sDZhW4t6jFAu8qVGlAXnY7OHbKwmDtylMlAcMX5JwfVY1=w800-h800-k-no" alt="Foto de Berica Estética">
+  <img loading="lazy" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RzwFuLDhv99d-QN7hGP9AjhGseJdqcpmSNWN6Bs8W_sjuBjzyxLMQKPbxkYn5FkWUhHlrGFSMRYAw964lpQx2W7QP4cBLuU7kI6m5KRBQVHS1XpykUG-AuVqlaL3qVksdAyuiRYnzKunKu=w800-h800-k-no" alt="Foto de Berica Estética">
+ </div>
+</section>
+
+<section id="donde" class="wrap reveal">
+ <div class="donde">
+  <div>
+   <div class="kicker">Dónde estamos</div>
+   <h2>Obispo Trejo 1040</h2>
+   <p class="sub">Nueva Córdoba. Wi-Fi para la espera y pago con tarjeta de crédito o débito.</p>
+   <ul class="horas" id="horas">
+    <li data-d="1"><span>Lunes</span><span>9 a 21</span></li>
+    <li data-d="2"><span>Martes</span><span>9 a 21</span></li>
+    <li data-d="3"><span>Miércoles</span><span>9 a 21</span></li>
+    <li data-d="4"><span>Jueves</span><span>9:30 a 21</span></li>
+    <li data-d="5"><span>Viernes</span><span>9 a 21</span></li>
+    <li data-d="6"><span>Sábado y domingo</span><span>Cerrado</span></li>
+   </ul>
+   <div class="acciones"><a class="btn sec" href="https://www.instagram.com/berica.estetica/" target="_blank" rel="noopener">@berica.estetica</a></div>
+  </div>
+  <iframe title="Mapa de Berica Estética" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Berica%20Est%C3%A9tica%2C%20Obispo%20Trejo%201040%2C%20C%C3%B3rdoba&output=embed"></iframe>
+ </div>
+</section>
+</main>
+
+<footer class="wrap">Muestra de diseño hecha por newaves con las fotos y opiniones reales del local.</footer>
+<nav class="barra"><a class="btn" href="#turno">Pedir turno</a><a class="btn sec" href="tel:+543517885606">Llamar</a></nav>
+
+<script>
+(function(){
+ var wa='5493517885606';
+ document.querySelectorAll('.chips').forEach(function(g){
+  g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+   g.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});
+ });
+ function sel(k){var b=document.querySelector('[data-g="'+k+'"] [aria-pressed=true]');return b?b.textContent:'';}
+ document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+  var t=sel('t'),p=sel('p'),h=sel('h'),n=document.getElementById('n').value.trim();
+  var q=t==='Que me asesoren'?'que me asesoren sobre qué tratamiento hacerme':'un turno para '+(t||'una limpieza facial').toLowerCase();
+  var m='¡Hola Berica! '+(n?'Soy '+n+'. ':'')+'Quería '+q+(p&&p!=='No sé'?' (tengo la piel '+p.toLowerCase()+')':'')+(h?(h.indexOf('Después')===0?', '+h.toLowerCase():', a la '+h.toLowerCase()):'')+'. ¿Qué disponibilidad tienen?';
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(m),'_blank');
+ });
+ var d=new Date().getDay();var li=document.querySelector('#horas [data-d="'+(d===0?6:d)+'"]');if(li)li.className='hoy';
+ document.querySelectorAll('img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+ var r=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('ok');io.unobserve(x.target)}})},{threshold:.12});r.forEach(function(x){io.observe(x)})}else{r.forEach(function(x){x.classList.add('ok')})}
+})();
+</script>
+</body>
+</html>
