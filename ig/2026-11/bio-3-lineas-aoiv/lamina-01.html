@@ -1,0 +1,84 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Lámina 01 (animada): una bio genérica en cuenta regresiva de 3 segundos; se tacha y se reescribe en 3 líneas. Se graba con ig_video.py (10 s). El primer cuadro ya es una portada completa. -->
+<link rel="stylesheet" href="noche.css">
+<style>
+h1{font-size:112px;line-height:.98;letter-spacing:-3px}
+.sub{position:absolute;left:80px;right:80px;top:395px;font-size:36px;color:#AEB8C8;font-weight:500}
+.sub b{color:#fff}
+.note{position:absolute;left:705px;top:150px;transform:rotate(-5deg)}
+.note .hand{font-size:50px;line-height:.95}
+.note svg{position:absolute;left:-30px;top:96px;width:80px;height:100px;transform:rotate(18deg)}
+.prof{top:490px}
+.prof .bio{font-size:32px;line-height:1.55}
+.bioz{position:relative;height:162px}
+.av{width:140px;height:140px}
+.prof .u{font-size:38px}
+.prof .nm{font-size:34px;margin-top:34px}
+.prof .cat{font-size:26px}
+.prof .lk{margin-top:22px}
+.prof .ejt{bottom:22px}
+.bad,.good{position:absolute;left:0;right:0;top:0}
+.bad div{position:relative;width:fit-content}
+.bad div:after{content:"";position:absolute;left:-6px;right:-6px;top:52%;height:5px;border-radius:3px;background:#F07A7A;transform:scaleX(0);transform-origin:0 50%;animation:strike .35s ease-out forwards}
+.bad div:nth-child(1):after{animation-delay:5.0s}.bad div:nth-child(2):after{animation-delay:5.25s}.bad div:nth-child(3):after{animation-delay:5.5s}
+.bad{animation:hide .35s linear 6.0s forwards}
+@keyframes strike{to{transform:scaleX(1)}}
+.good div{display:flex;gap:18px;align-items:center}
+.good .b{flex:none;width:40px;height:40px;border-radius:50%;background:#38E0A0;color:#070D1A;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0;animation:pop .35s cubic-bezier(.2,1.4,.4,1) forwards}
+.good .t{clip-path:inset(0 100% 0 0);animation:type .7s steps(30,end) forwards;white-space:nowrap}
+.good div:nth-child(1) .b{animation-delay:6.3s}.good div:nth-child(1) .t{animation-delay:6.4s}
+.good div:nth-child(2) .b{animation-delay:7.1s}.good div:nth-child(2) .t{animation-delay:7.2s}
+.good div:nth-child(3) .b{animation-delay:7.9s}.good div:nth-child(3) .t{animation-delay:8.0s}
+.timer{position:absolute;right:40px;top:36px;width:128px;height:128px}
+.timer svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.timer .ring{stroke-dasharray:352;stroke-dashoffset:0;animation:deplete 3s linear 1.6s forwards}
+@keyframes deplete{to{stroke-dashoffset:352;stroke:#F07A7A}}
+.timer .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58px;font-weight:800}
+.timer .num span{position:absolute;opacity:0}
+.timer .num .n3{opacity:1;animation:hide .01s linear 2.6s forwards}
+.n2{animation:show .01s linear 2.6s forwards,hide .01s linear 3.6s forwards}
+.n1{animation:show .01s linear 3.6s forwards,hide .01s linear 4.6s forwards}
+.n0{color:#F07A7A;animation:show .01s linear 4.6s forwards,hide .2s linear 6.0s forwards}
+.nok{color:#38E0A0;animation:show .3s linear 8.8s forwards}
+.timer .ring.ok{stroke:#38E0A0;stroke-dashoffset:352;opacity:0;animation:okring .6s ease-out 8.8s forwards}
+@keyframes okring{to{stroke-dashoffset:0;opacity:1}}
+.tlab{position:absolute;right:4px;top:174px;width:200px;text-align:center;font-size:18px;font-weight:800;letter-spacing:2px;color:#8D99AE}
+.tlab span{position:absolute;left:0;right:0}
+.tl1{animation:hide .2s linear 6.0s forwards}
+.tl2{opacity:0;color:#38E0A0;animation:show .3s linear 8.8s forwards}
+.st{position:absolute;left:80px;right:80px;top:1105px;height:50px;font-size:34px;font-weight:700}
+.st span{position:absolute;left:0;top:0;white-space:nowrap}
+.s0{color:#AEB8C8;font-weight:500;animation:hide .2s linear 4.6s forwards}
+.s1{color:#F07A7A;opacity:0;animation:show .2s linear 4.65s forwards,hide .3s linear 6.0s forwards}
+.s2{color:#38E0A0;opacity:0;animation:fade .4s ease-out 8.9s forwards}
+.s2 i{font-style:normal;color:#AEB8C8;font-weight:500}
+</style></head><body>
+<div class="top"><div>newaves<span class="dot">.</span></div><div class="c">01 / 10</div></div>
+<h1>Tu bio tiene<br><span class="g">3 segundos.</span></h1>
+<div class="note"><span class="hand">(después,<br>se van)</span></div>
+<div class="sub">Y casi todos los gastan en <b>“apasionada por…”</b></div>
+
+<div class="prof card">
+ <div class="hd"><div class="av"><div>LF</div></div><div><div class="u">lucia.nutri</div><div class="bts"><span class="f">Seguir</span><span>Mensaje</span></div></div></div>
+ <div class="timer">
+  <svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="56" fill="none" stroke="#22314C" stroke-width="9"/><circle class="ring" cx="64" cy="64" r="56" fill="none" stroke="#38E0A0" stroke-width="9" stroke-linecap="round"/><circle class="ring ok" cx="64" cy="64" r="56" fill="none" stroke-width="9" stroke-linecap="round"/></svg>
+  <div class="num"><span class="n3">3</span><span class="n2">2</span><span class="n1">1</span><span class="n0">0</span><span class="nok"><svg width="62" height="62" viewBox="0 0 24 24" fill="none" stroke="#38E0A0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" style="transform:none;position:static"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div>
+ </div>
+ <div class="tlab"><span class="tl1">SEGUNDOS</span><span class="tl2">SE ENTIENDE</span></div>
+ <div class="nm">Lucía Ferrer</div>
+ <div class="cat">Nutricionista</div>
+ <div class="bioz bio">
+  <div class="bad"><div>✨ Nutricionista | Mamá | Viajera ✨</div><div>Apasionada por ayudarte a ser tu mejor versión 💚</div><div>Link abajo 👇</div></div>
+  <div class="good">
+   <div><span class="b">1</span><span class="t">Ayudo a corredoras a comer mejor, sin dietas raras.</span></div>
+   <div><span class="b">2</span><span class="t">Nutricionista deportiva · 9 años · Córdoba</span></div>
+   <div><span class="b">3</span><span class="t">Escribime PLAN y te paso tu primera semana.</span></div>
+  </div>
+ </div>
+ <div class="lk">🔗 tusitio.com</div>
+ <div class="ejt ej">ejemplo · persona inventada</div>
+</div>
+<div class="st"><span class="s0">Alguien entra a tu perfil desde un post…</span><span class="s1">…no entendió qué hacés. Se fue.</span><span class="s2">✓ Misma persona. Otra bio. <i>Te dejo la fórmula →</i></span></div>
+
+<div class="foot"><div class="who"><img src="../../plantilla/newaves-isotipo-blanco.svg">@somosnewaves</div><div class="sw">DESLIZÁ →</div></div>
+</body></html>

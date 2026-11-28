@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu bio en 3 líneas · newaves</title>
+<meta name="description" content="La plantilla de newaves para escribir tu bio de Instagram en 3 líneas: la fórmula, 9 ejemplos, el prompt para la IA y un armador que cuenta los caracteres.">
+<meta property="og:title" content="Tu bio en 3 líneas: la plantilla de newaves">
+<meta property="og:description" content="La fórmula, 9 ejemplos, el prompt para la IA y un armador que cuenta los caracteres.">
+<meta property="og:image" content="https://demos.somosnewaves.com/ig/2026-11/bio-3-lineas-aoiv/slide-01.jpg">
+<style>
+@font-face{font-family:Figtree;font-weight:500;src:url(../../ig/plantilla/fonts/figtree-latin-500-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Figtree;font-weight:700;src:url(../../ig/plantilla/fonts/figtree-latin-700-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Figtree;font-weight:800;src:url(../../ig/plantilla/fonts/figtree-latin-800-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Caveat;font-weight:700;src:url(../../ig/plantilla/fonts/caveat-latin-700-normal.woff2) format("woff2");font-display:swap}
+:root{--bg:#070D1A;--card:#111B2D;--line:#22314C;--ink:#fff;--soft:#AEB8C8;--mute:#7C889E;--g:#38E0A0}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);background-image:radial-gradient(80% 40% at 50% 0%,#0F1C33 0%,transparent 70%);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-weight:500;line-height:1.6;font-size:18px}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+header{padding:28px 0 0;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:22px}
+header a{color:var(--ink);text-decoration:none}
+.dot{color:var(--g)}
+.hero{padding:64px 0 32px}
+.tag{display:inline-block;font-size:13px;font-weight:800;letter-spacing:3px;color:var(--bg);background:var(--g);border-radius:30px;padding:6px 14px}
+h1{font-size:clamp(38px,8vw,64px);line-height:1.02;letter-spacing:-1.5px;font-weight:800;margin:20px 0 18px}
+h1 span,.g{color:var(--g)}
+.lead{font-size:20px;color:var(--soft);max-width:620px}
+.lead b{color:var(--ink)}
+.hand{font-family:Caveat;font-weight:700;color:var(--g);font-size:28px;line-height:1.1}
+nav.toc{margin:28px 0 8px;display:flex;flex-wrap:wrap;gap:10px}
+nav.toc a{font-size:15px;font-weight:700;color:var(--ink);text-decoration:none;border:1.5px solid var(--line);border-radius:30px;padding:8px 14px}
+nav.toc a:hover{border-color:var(--g)}
+section{padding:44px 0 8px;border-top:1px solid #16223A;margin-top:36px}
+.n{font-size:14px;font-weight:800;letter-spacing:3px;color:var(--g)}
+h2{font-size:clamp(28px,5.5vw,40px);line-height:1.1;letter-spacing:-.8px;margin:8px 0 14px;font-weight:800}
+h3{font-size:20px;margin:28px 0 8px;font-weight:800}
+p{margin:0 0 14px;color:var(--soft)}
+p b,li b{color:var(--ink)}
+ul,ol{color:var(--soft);padding-left:22px;margin:0 0 14px}
+li{margin:6px 0}
+.prompt{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:20px;margin:18px 0 10px;overflow:hidden}
+.prompt .bar{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1.5px solid var(--line);font-size:14px;font-weight:700;color:var(--mute);gap:12px}
+.prompt pre{margin:0;padding:18px 18px 20px;white-space:pre-wrap;word-wrap:break-word;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;line-height:1.65;color:#DDE4EF}
+.prompt pre em{font-style:normal;color:var(--g)}
+button.copy{font:inherit;font-size:14px;font-weight:800;border:0;border-radius:20px;padding:7px 14px;background:var(--g);color:var(--bg);cursor:pointer;flex:none}
+button.copy.ok{background:#fff}
+.tip{border-left:4px solid var(--g);padding:4px 0 4px 16px;margin:18px 0;color:var(--soft)}
+.tip b{color:var(--ink)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.box{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:18px}
+.box h4{margin:0 0 6px;font-size:17px}
+.box p{margin:0;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chips span{font-size:15px;font-weight:700;border:1.5px solid var(--line);border-radius:30px;padding:6px 12px;color:#DDE4EF}
+.check li{list-style:none;position:relative;padding-left:30px}
+.check{padding-left:0}
+.check li:before{content:"";position:absolute;left:0;top:6px;width:18px;height:18px;border-radius:50%;background:var(--g)}
+.check li:after{content:"";position:absolute;left:6px;top:9px;width:5px;height:9px;border:solid var(--bg);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.cta{margin:56px 0 30px;padding:34px 26px;border-radius:26px;background:linear-gradient(160deg,#13243A,#0C1628);border:1.5px solid var(--g);text-align:center}
+.cta h2{margin-top:4px}
+.cta p{max-width:520px;margin:0 auto 22px}
+.btn{display:inline-block;background:var(--g);color:var(--bg);font-weight:800;font-size:19px;text-decoration:none;border-radius:40px;padding:16px 30px;box-shadow:0 0 50px rgba(56,224,160,.3)}
+.btn:hover{transform:translateY(-1px)}
+footer{padding:20px 0 48px;color:var(--mute);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:var(--soft)}
+kbd{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#16233A;border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:#fff}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}body{font-size:17px}.prompt pre{font-size:14px}}
+
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.exc{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:16px 18px}
+.exc .r{font-size:12px;font-weight:800;letter-spacing:3px;color:var(--mute);margin-bottom:6px;display:flex;justify-content:space-between}
+.exc .r span{color:var(--g);letter-spacing:0}
+.exc p{margin:0;color:#E9EEF6;font-size:16px;line-height:1.5;white-space:pre-line}
+.fx{background:var(--card);border:1.5px solid var(--g);border-radius:18px;padding:18px 20px;font-size:21px;font-weight:800;line-height:1.6;margin:16px 0}
+.fx .s{border-radius:8px;padding:0 8px;white-space:nowrap}
+.s1{background:var(--g);color:var(--bg)}.s2{background:#7FA7FF;color:var(--bg)}.s3{background:#2A3A57;color:#fff}
+.nos{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.nos span{font-size:15px;font-weight:700;border:1.5px solid #4A2A33;color:#F07A7A;border-radius:30px;padding:5px 12px;text-decoration:line-through}
+.tool{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:20px;margin:18px 0}
+.tool label{display:block;font-size:14px;font-weight:800;letter-spacing:2px;color:var(--mute);margin:14px 0 6px}
+.tool label:first-child{margin-top:0}
+.tool input{width:100%;font:inherit;font-size:17px;color:#fff;background:#0B1424;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;outline:none}
+.tool input:focus{border-color:var(--g)}
+.pv{margin-top:20px;background:#0B1424;border:1.5px solid var(--line);border-radius:18px;padding:18px}
+.pv .nm{font-weight:800;color:#fff}
+.pv .bio{white-space:pre-line;color:#E9EEF6;line-height:1.5;margin-top:4px;min-height:72px}
+.meter{display:flex;align-items:center;gap:14px;margin-top:14px}
+.meter .bar{flex:1;height:10px;border-radius:5px;background:#1E2B44;overflow:hidden}
+.meter .bar i{display:block;height:100%;width:0;background:var(--g);border-radius:5px;transition:width .2s}
+.meter b{font-variant-numeric:tabular-nums;min-width:86px;text-align:right}
+.meter.over i{background:#F07A7A}.meter.over b{color:#F07A7A}
+.small{font-size:14px;color:var(--mute)}
+@media (max-width:560px){.ex{grid-template-columns:1fr}.fx{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="w">
+<header><a href="https://somosnewaves.com">newaves<span class="dot">.</span></a><span style="font-size:15px;color:var(--mute);font-weight:700">@somosnewaves</span></header>
+
+<div class="hero">
+  <span class="tag">PLANTILLA GRATIS</span>
+  <h1>Tu bio en 3 líneas.<br><span>Que se entienda en 3 segundos.</span></h1>
+  <p class="lead">Alguien ve un post tuyo, toca tu nombre y entra al perfil. Tiene unos segundos y <b>3 preguntas</b> en la cabeza. Si tu bio no las contesta, se va. Acá está la fórmula que usamos en newaves, con ejemplos, el prompt y un armador para escribir la tuya ahora.</p>
+  <p class="hand">completá, copiá y pegá en tu perfil ↓</p>
+  <nav class="toc">
+    <a href="#preguntas">Las 3 preguntas</a><a href="#nombre">El nombre</a><a href="#l1">Línea 1</a><a href="#l2">Línea 2</a><a href="#l3">Línea 3</a><a href="#armador">Armador</a><a href="#ejemplos">9 ejemplos</a><a href="#prompt">Prompt</a><a href="#checklist">Checklist</a>
+  </nav>
+</div>
+
+<section id="preguntas">
+  <div class="n">LA IDEA</div>
+  <h2>Tres preguntas, <span class="g">tres líneas</span></h2>
+  <p>Tu bio no es un currículum ni una presentación. Es un cartel en la puerta. Cada línea contesta una pregunta del que entra:</p>
+  <div class="grid2" style="grid-template-columns:1fr">
+    <div class="box"><h4>1 · ¿Qué hacés y para quién?</h4><p>Lo que lográs y para qué persona. Si no se entiende esto, nada más importa.</p></div>
+    <div class="box"><h4>2 · ¿Por qué vos?</h4><p>Uno o dos datos que se puedan comprobar. No adjetivos.</p></div>
+    <div class="box"><h4>3 · ¿Y ahora qué toco?</h4><p>Un solo pedido, con lo que la persona recibe a cambio.</p></div>
+  </div>
+  <p class="tip"><b>“Mamá, viajera y soñadora”</b> te humaniza, pero no le dice a nadie si podés ayudarlo. Eso cuentalo en tus historias y tus posts.</p>
+</section>
+
+<section id="nombre">
+  <div class="n">ANTES DE EMPEZAR</div>
+  <h2>Tu <span class="g">nombre</span> también trabaja</h2>
+  <p>El campo <b>Nombre</b> (el que aparece en negrita, no tu @) también cuenta cuando alguien busca en Instagram. Usalo para sumar lo que te buscarían.</p>
+  <div class="grid2">
+    <div class="box"><h4 style="color:#F07A7A">Así no</h4><p>Lucía ✨🌿</p></div>
+    <div class="box" style="border-color:var(--g)"><h4 class="g">Así sí</h4><p>Lucía Ferrer | Nutrición para runners</p></div>
+  </div>
+  <p class="small">Ejemplo con una persona inventada.</p>
+</section>
+
+<section id="l1">
+  <div class="n">LÍNEA 1</div>
+  <h2>A quién ayudás <span class="g">a lograr qué</span></h2>
+  <div class="fx">Ayudo a <span class="s s1">quién</span> a <span class="s s2">resultado</span> sin <span class="s s3">lo que odian</span>.</div>
+  <ul>
+    <li><b>Quién:</b> una persona que se reconozca al leerlo. “Corredoras”, “monotributistas”, “dueños de restaurantes”. No “personas que quieren crecer”.</li>
+    <li><b>Resultado:</b> lo que cambia en su vida o en su negocio, en palabras de ellos. “Dormir tranquilos”, “llenar la agenda”.</li>
+    <li><b>Sin:</b> el camino que ya probaron y odian. “Sin dietas raras”, “sin vivir en Instagram”. Es opcional, pero suele ser lo que más engancha.</li>
+  </ul>
+  <p class="tip"><b>Si le sirve a cualquiera, no le habla a nadie.</b> Escribila pensando en una sola persona que ya atendiste.</p>
+</section>
+
+<section id="l2">
+  <div class="n">LÍNEA 2</div>
+  <h2>Por qué vos, <span class="g">con algo comprobable</span></h2>
+  <p>Elegí uno o dos datos que cualquiera podría verificar y separalos con un punto medio (·).</p>
+  <div class="nos"><span>La mejor</span><span>Experta</span><span>Apasionada</span><span>Mentora de vida</span><span>Tu mejor versión</span></div>
+  <div class="chips"><span>Tus años de experiencia</span><span>Dónde trabajaste o te formaste</span><span>Tu matrícula o título</span><span>Tu método, si tiene nombre</span><span>Tu ciudad, si atendés en persona</span><span>Online / presencial</span><span>Plazo de entrega</span></div>
+  <p class="tip"><b>Si no lo podés probar, no va.</b> Un número inventado en la bio es lo primero que desconfía un cliente.</p>
+</section>
+
+<section id="l3">
+  <div class="n">LÍNEA 3</div>
+  <h2>Un solo pedido. <span class="g">No cuatro.</span></h2>
+  <p>“Seguime, escribime, mirá mis destacadas, link abajo” es pedir todo y no conseguir nada. Elegí <b>una acción</b> y decí <b>qué recibe</b> la persona.</p>
+  <ul class="check">
+    <li><b>Palabra por mensaje:</b> “Escribime PLAN y te paso tu primera semana.”</li>
+    <li><b>Agenda:</b> “Agendá una charla de 20 min ↓”</li>
+    <li><b>Recurso gratis:</b> “Bajá la guía de 5 recetas ↓”</li>
+    <li><b>Compra directa:</b> “Pedí por WhatsApp ↓”</li>
+  </ul>
+  <p class="tip"><b>Y que el link lleve a ese mismo lugar.</b> Si la bio dice “agendá”, el link abre la agenda. No una página con 12 botones.</p>
+</section>
+
+<section id="armador">
+  <div class="n">ARMADOR</div>
+  <h2>Escribí la tuya <span class="g">acá</span></h2>
+  <p>Completá las casillas. Abajo ves cómo queda y cuántos caracteres usás (Instagram te deja 150).</p>
+  <div class="tool">
+    <label for="fn">NOMBRE (EL CAMPO EN NEGRITA)</label><input id="fn" value="Lucía Ferrer | Nutrición para runners" maxlength="64">
+    <label for="f1">LÍNEA 1 · A QUIÉN AYUDÁS A LOGRAR QUÉ</label><input id="f1" value="Ayudo a corredoras a comer mejor, sin dietas raras.">
+    <label for="f2">LÍNEA 2 · POR QUÉ VOS</label><input id="f2" value="Nutricionista deportiva · 9 años · Córdoba">
+    <label for="f3">LÍNEA 3 · UN SOLO PEDIDO</label><input id="f3" value="Escribime PLAN y te paso tu primera semana.">
+    <div class="pv"><div class="nm" id="pn"></div><div class="bio" id="pb"></div>
+      <div class="meter" id="mt"><div class="bar"><i id="mb"></i></div><b id="mc">0 / 150</b></div></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center"><button class="copy" id="cp">Copiar la bio</button><span class="small">Los emojis pueden contar como 2 caracteres en Instagram.</span></div>
+  </div>
+  <p class="small">El ejemplo que viene cargado es de una persona inventada: borralo y escribí la tuya.</p>
+</section>
+
+<section id="ejemplos">
+  <div class="n">9 EJEMPLOS</div>
+  <h2>El patrón, <span class="g">en distintos rubros</span></h2>
+  <p>Todos inventados, para que veas cómo se adapta la fórmula. No copies el texto: copiá la estructura.</p>
+  <div class="ex">
+<div class="exc"><div class="r">NUTRICIONISTA<span>138 / 150</span></div><p>Ayudo a corredoras a comer mejor, sin dietas raras.
+Nutricionista deportiva · 9 años · Córdoba
+Escribime PLAN y te paso tu primera semana.</p></div>
+<div class="exc"><div class="r">COACH<span>129 / 150</span></div><p>Ayudo a coaches a llenar su agenda sin vivir en Instagram.
+Ex gerente comercial · Método en 3 pasos
+Agendá una charla de 20 min ↓</p></div>
+<div class="exc"><div class="r">CONTADORA<span>144 / 150</span></div><p>Ayudo a monotributistas a dormir tranquilos, sin planillas.
+Contadora pública · Atención 100% online
+Escribime CATEGORÍA y te digo cuál te toca.</p></div>
+<div class="exc"><div class="r">RESTAURANTE<span>117 / 150</span></div><p>Almuerzos para oficinas de Nueva Córdoba, listos en 15 min.
+Cocina casera · Menú nuevo cada lunes
+Pedí por WhatsApp ↓</p></div>
+<div class="exc"><div class="r">PSICÓLOGA<span>129 / 150</span></div><p>Acompaño a adultos con ansiedad a recuperar el sueño.
+Lic. en Psicología · Terapia online en español
+Pedí tu primera entrevista ↓</p></div>
+<div class="exc"><div class="r">FOTÓGRAFO<span>116 / 150</span></div><p>Fotos de marca para emprendedoras que odian posar.
+Sesiones en Córdoba · Entrega en 7 días
+Mirá cómo es una sesión ↓</p></div>
+<div class="exc"><div class="r">ENTRENADOR<span>138 / 150</span></div><p>Ayudo a oficinistas a entrenar 30 min sin ir al gimnasio.
+Prof. de Educación Física · Planes online
+Escribime RUTINA y te paso la primera.</p></div>
+<div class="exc"><div class="r">INMOBILIARIA<span>124 / 150</span></div><p>Te ayudamos a alquilar en Córdoba sin perder fines de semana.
+Matriculados · Visitas también por video
+Contanos qué buscás ↓</p></div>
+<div class="exc"><div class="r">ABOGADA<span>143 / 150</span></div><p>Ayudo a pymes a cobrar lo que les deben, sin juicios eternos.
+Abogada · 12 años en derecho comercial
+Escribime COBRO y te explico cómo empezar.</p></div>
+  </div>
+</section>
+
+<section id="prompt">
+  <div class="n">PROMPT</div>
+  <h2>Que la IA te proponga <span class="g">5 versiones</span></h2>
+  <p>Pegalo en Claude o ChatGPT y cambiá lo que está en verde. Si ya tenés un documento con tu marca y tu forma de hablar, adjuntalo.</p>
+  <div class="prompt"><div class="bar"><span>Prompt · bio en 3 líneas</span><button class="copy">Copiar</button></div>
+<pre>Sos mi redactor. Escribime 5 versiones de mi bio de Instagram.
+
+Sobre mí:
+- Qué hago: <em>[ej.: nutrición deportiva]</em>
+- Para quién (una persona concreta): <em>[ej.: mujeres que corren carreras de calle]</em>
+- Qué logran conmigo, en sus palabras: <em>[ej.: comer mejor y rendir más]</em>
+- Lo que ya probaron y odian: <em>[ej.: dietas de moda]</em>
+- Datos comprobables: <em>[años, título, dónde trabajé, ciudad, online/presencial]</em>
+- Qué quiero que hagan al entrar: <em>[escribirme una palabra / agendar / bajar algo]</em> y qué reciben: <em>[ej.: su primera semana de comidas]</em>
+- Cómo hablo: <em>[ej.: de vos, cercana, con humor seco, sin emojis de más]</em>
+
+Reglas:
+1. Tres líneas. Línea 1: a quién ayudo a lograr qué (y sin qué). Línea 2: uno o dos datos comprobables separados por " · ". Línea 3: un solo pedido con lo que reciben.
+2. Máximo 150 caracteres en total, contando los saltos de línea. Poné el conteo al lado de cada versión.
+3. Nada de "apasionada", "experta", "la mejor", "tu mejor versión", ni datos que yo no te di.
+4. Que se entienda en 3 segundos por alguien que no me conoce.
+
+Además, proponeme 3 opciones para el campo Nombre con el formato "Nombre Apellido | lo que me buscarían" (máximo 64 caracteres).</pre></div>
+  <p class="tip"><b>Ojo:</b> la IA a veces cuenta mal los caracteres. Pegá la versión que elijas en el armador de arriba para confirmar.</p>
+</section>
+
+<section id="checklist">
+  <div class="n">CHECKLIST</div>
+  <h2>Antes de guardar, <span class="g">7 preguntas</span></h2>
+  <ul class="check">
+    <li>¿Se entiende qué hacés y para quién en la primera línea?</li>
+    <li>¿Nombraste a una persona concreta y no a “todos”?</li>
+    <li>¿Todo lo de la línea 2 se puede comprobar?</li>
+    <li>¿Hay un solo pedido y dice qué recibe la persona?</li>
+    <li>¿El link lleva exactamente a lo que dice la línea 3?</li>
+    <li>¿El Nombre suma lo que te buscarían?</li>
+    <li>¿Se la mostraste 3 segundos a alguien que no te conoce y te supo decir qué hacés?</li>
+  </ul>
+</section>
+
+<div class="cta">
+  <p class="hand" style="margin:0 0 6px">¿querés que la revisemos juntos?</p>
+  <h2>Tu perfil, <span class="g">listo para recibir clientes</span></h2>
+  <p>En newaves miramos tu bio, tu link y tus primeros posts como los ve alguien que llega por primera vez. Charlamos 20 minutos y te decimos qué cambiaríamos.</p>
+  <a class="btn" href="https://calendar.app.google/PRsR7PGPaVDokrSQ8" target="_blank" rel="noopener">Agendar una llamada →</a>
+</div>
+
+<footer><span>newaves<span class="dot">.</span> · Córdoba, Argentina</span><a href="https://www.instagram.com/somosnewaves/">@somosnewaves</a></footer>
+</div>
+<script>
+function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(a)}
+function copiar(t,b,lab){var done=function(){b.textContent='¡Copiado!';b.classList.add('ok');setTimeout(function(){b.textContent=lab;b.classList.remove('ok')},1800)};
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done()})}else{fallback(t);done()}}
+document.querySelectorAll('.prompt button.copy').forEach(function(b){b.addEventListener('click',function(){copiar(b.closest('.prompt').querySelector('pre').innerText,b,'Copiar')})});
+var ids=['f1','f2','f3'];
+function bio(){return ids.map(function(i){return document.getElementById(i).value.trim()}).filter(Boolean).join('\n')}
+function upd(){var b=bio(),n=Array.from(b).length;
+ document.getElementById('pn').textContent=document.getElementById('fn').value||'Tu nombre';
+ document.getElementById('pb').textContent=b||'Tu bio aparece acá…';
+ document.getElementById('mc').textContent=n+' / 150';
+ document.getElementById('mb').style.width=Math.min(100,n/1.5)+'%';
+ document.getElementById('mt').classList.toggle('over',n>150)}
+['fn'].concat(ids).forEach(function(i){document.getElementById(i).addEventListener('input',upd)});upd();
+document.getElementById('cp').addEventListener('click',function(){copiar(bio(),this,'Copiar la bio')});
+</script>
+</body>
+</html>

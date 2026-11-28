@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Lámina 08 (animada): se arma la bio de 3 líneas y el contador de caracteres sube hasta 138 / 150. Se graba con ig_video.py (8 s). -->
+<link rel="stylesheet" href="noche.css">
+<style>
+.step{position:absolute;left:80px;top:150px}
+h1{top:215px}
+.lead{position:absolute;left:80px;right:80px;top:420px}
+.prof{top:545px}
+.prof .bio{font-size:32px;line-height:1.55;margin-top:14px;height:150px}
+.prof .nm{margin-top:30px}
+.prof .nm .add{color:#38E0A0;clip-path:inset(0 100% 0 0);animation:type .6s steps(24,end) .5s forwards;display:inline-block}
+.ln{display:flex;gap:18px;align-items:center}
+.ln .b{flex:none;width:40px;height:40px;border-radius:50%;background:#38E0A0;color:#070D1A;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;opacity:0;animation:pop .35s cubic-bezier(.2,1.4,.4,1) forwards}
+.ln .t{white-space:nowrap;clip-path:inset(0 100% 0 0);animation:type forwards}
+.ln:nth-child(1) .b{animation-delay:1.1s}.ln:nth-child(1) .t{animation-delay:1.2s;animation-duration:1.4s;animation-timing-function:steps(51,end)}
+.ln:nth-child(2) .b{animation-delay:2.8s}.ln:nth-child(2) .t{animation-delay:2.9s;animation-duration:1.2s;animation-timing-function:steps(42,end)}
+.ln:nth-child(3) .b{animation-delay:4.3s}.ln:nth-child(3) .t{animation-delay:4.4s;animation-duration:1.2s;animation-timing-function:steps(43,end)}
+.meter{margin-top:26px;display:flex;align-items:center;gap:22px}
+.bar{flex:1;height:14px;border-radius:7px;background:#1E2B44;overflow:hidden}
+.bar i{display:block;height:100%;width:calc(var(--n) * 100% / 150);background:#38E0A0;border-radius:7px;animation:cnt 4.4s linear 1.2s forwards}
+.cnt{font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;min-width:170px;text-align:right;color:#AEB8C8;animation:cnt 4.4s linear 1.2s forwards}
+.cnt{counter-reset:n var(--n)}
+.cnt::before{content:counter(n)}
+.cnt b{color:#5E6B82;font-weight:700}
+@keyframes cnt{0%{--n:0}31.8%{--n:51}38.6%{--n:52}65.9%{--n:94}72.7%{--n:95}100%{--n:138}}
+.okc{position:absolute;left:80px;right:80px;top:1148px;display:flex;align-items:center;gap:22px;opacity:0;animation:fade .45s ease-out 6.0s forwards}
+.okc .ck{flex:none;width:58px;height:58px;border-radius:50%;background:#38E0A0;display:flex;align-items:center;justify-content:center}
+.okc div{font-size:32px;line-height:1.35;color:#AEB8C8}
+.okc b{color:#fff}
+.note{position:absolute;right:80px;top:470px;transform:rotate(-4deg);opacity:0;animation:fade .4s ease-out 6.4s forwards}
+.note .hand{font-size:44px}
+</style></head><body>
+<div class="top"><div>newaves<span class="dot">.</span></div><div class="c">08 / 10</div></div>
+<div class="step">TODO JUNTO</div>
+<h1>Juntalo y<br><span class="g">contá los caracteres.</span></h1>
+<div class="lead">Instagram te da <b>150</b>. No hace falta usarlos todos.</div>
+<div class="note"><span class="hand">sobran 12 ✓</span></div>
+<div class="prof card">
+ <div class="hd"><div class="av"><div>LF</div></div><div><div class="u">lucia.nutri</div><div class="bts"><span class="f">Seguir</span><span>Mensaje</span></div></div></div>
+ <div class="nm">Lucía Ferrer <span class="add">| Nutrición para runners</span></div>
+ <div class="cat">Nutricionista</div>
+ <div class="bio">
+  <div class="ln"><span class="b">1</span><span class="t">Ayudo a corredoras a comer mejor, sin dietas raras.</span></div>
+  <div class="ln"><span class="b">2</span><span class="t">Nutricionista deportiva · 9 años · Córdoba</span></div>
+  <div class="ln"><span class="b">3</span><span class="t">Escribime PLAN y te paso tu primera semana.</span></div>
+ </div>
+ <div class="meter"><div class="bar"><i></i></div><div class="cnt"><b> / 150</b></div></div>
+ <div class="ej" style="margin-top:14px">ejemplo · persona inventada · los números chiquitos no van en tu bio</div>
+</div>
+<div class="okc"><div class="ck"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#070D1A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div><b>La prueba final:</b> mostrásela 3 segundos a alguien que no te conoce. ¿Te dice qué hacés? Listo.</div></div>
+<div class="foot"><div class="who"><img src="../../plantilla/newaves-isotipo-blanco.svg">@somosnewaves</div><div class="sw">DESLIZÁ →</div></div>
+</body></html>
